@@ -1,20 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5725e6ee-9e6d-4638-8f4d-e20ecb0dfed2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/project/src/components/offer/offer.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/src/pages/favorites/favorites.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/src/pages/favorites_empty/favorites_empty.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/src/pages/login/login.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/src/pages/main/main.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/src/pages/main_empty/main_empty.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/src/pages/property/property.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/src/pages/property_not_logged/property_not_logged.tsx" afterDir="false" />
+    <list default="true" id="5725e6ee-9e6d-4638-8f4d-e20ecb0dfed2" name="Changes" comment="gotovo">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/project/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/src/components/app/app.test.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/src/components/app/app.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/components/offer/offer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/components/offer/offer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/pages/property/property.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/pages/property/property.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/pages/property_not_logged/property_not_logged.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/pages/property_not_logged/property_not_logged.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,8 +46,16 @@
       <updated>1657136778575</updated>
       <workItem from="1657136785774" duration="431000" />
       <workItem from="1657454650228" duration="1093000" />
-      <workItem from="1657484825710" duration="13141000" />
+      <workItem from="1657484825710" duration="14061000" />
     </task>
+    <task id="LOCAL-00001" summary="gotovo">
+      <created>1657736720489</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1657736720489</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -73,5 +72,9 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="gotovo" />
+    <option name="LAST_COMMIT_MESSAGE" value="gotovo" />
   </component>
 </project>

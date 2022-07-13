@@ -5,7 +5,7 @@ function Offer(): JSX.Element {
         <span>Premium</span>
       </div>
       <div className="cities__image-wrapper place-card__image-wrapper">
-        <a href="#">
+        <a href={'#'}>
           <img className="place-card__image" src="../project/public/img/apartment-03.jpg" width="260" height="200" alt="Place image" />
         </a>
       </div>
@@ -29,7 +29,7 @@ function Offer(): JSX.Element {
           </div>
         </div>
         <h2 className="place-card__name">
-          <a href="#">Nice, cozy, warm big bed apartment</a>
+          <a href="df##">Nice, cozy, warm big bed apartment</a>
         </h2>
         <p className="place-card__type">Apartment</p>
       </div>
