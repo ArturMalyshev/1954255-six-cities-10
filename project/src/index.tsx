@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import App from './components/app/app';
+import Offer from './components/offer/offer';
+import MainPage from './pages/main/main';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement,
@@ -8,6 +9,12 @@ const root = ReactDOM.createRoot(
 
 root.render(
   <React.StrictMode>
-    <App />
+    <MainPage>
+      <Offer />
+      <Offer />
+      <Offer />
+      <Offer />
+      <Offer />
+    </MainPage>
   </React.StrictMode>,
 );
