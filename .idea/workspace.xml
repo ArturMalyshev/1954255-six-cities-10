@@ -1,71 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fcf3a1f3-6e80-4446-9244-bc655fbaa9a2" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/markup/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/project/public/css/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/markup/css/main.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/project/public/css/main.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/markup/favorites-empty.html" beforeDir="false" afterPath="$PROJECT_DIR$/markup/favorites-empty.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/markup/favorites.html" beforeDir="false" afterPath="$PROJECT_DIR$/markup/favorites.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/markup/fonts/rubik-bold.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/project/public/fonts/rubik-bold.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/markup/fonts/rubik-bold.woff" beforeDir="false" afterPath="$PROJECT_DIR$/project/public/fonts/rubik-bold.woff" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/markup/fonts/rubik-bold.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/project/public/fonts/rubik-bold.woff2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/markup/fonts/rubik-light.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/project/public/fonts/rubik-light.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/markup/fonts/rubik-light.woff" beforeDir="false" afterPath="$PROJECT_DIR$/project/public/fonts/rubik-light.woff" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/markup/fonts/rubik-light.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/project/public/fonts/rubik-light.woff2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/markup/fonts/rubik-medium.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/project/public/fonts/rubik-medium.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/markup/fonts/rubik-medium.woff" beforeDir="false" afterPath="$PROJECT_DIR$/project/public/fonts/rubik-medium.woff" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/markup/fonts/rubik-medium.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/project/public/fonts/rubik-medium.woff2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/markup/fonts/rubik-regular.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/project/public/fonts/rubik-regular.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/markup/fonts/rubik-regular.woff" beforeDir="false" afterPath="$PROJECT_DIR$/project/public/fonts/rubik-regular.woff" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/markup/fonts/rubik-regular.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/project/public/fonts/rubik-regular.woff2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/markup/img/amsterdam.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/project/public/img/amsterdam.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/markup/img/amsterdam@2x.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/project/public/img/amsterdam@2x.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/markup/img/apartment-01.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/project/public/img/apartment-01.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/markup/img/apartment-02.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/project/public/img/apartment-02.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/markup/img/apartment-03.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/project/public/img/apartment-03.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/markup/img/apartment-small-03.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/project/public/img/apartment-small-03.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/markup/img/apartment-small-04.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/project/public/img/apartment-small-04.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/markup/img/avatar-angelina.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/project/public/img/avatar-angelina.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/markup/img/avatar-max.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/project/public/img/avatar-max.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/markup/img/avatar.svg" beforeDir="false" afterPath="$PROJECT_DIR$/project/public/img/avatar.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/markup/img/ico-adults.svg" beforeDir="false" afterPath="$PROJECT_DIR$/project/public/img/ico-adults.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/markup/img/ico-bedrooms.svg" beforeDir="false" afterPath="$PROJECT_DIR$/project/public/img/ico-bedrooms.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/markup/img/ico-no-results.svg" beforeDir="false" afterPath="$PROJECT_DIR$/project/public/img/ico-no-results.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/markup/img/ico-place.svg" beforeDir="false" afterPath="$PROJECT_DIR$/project/public/img/ico-place.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/markup/img/ico-saved.svg" beforeDir="false" afterPath="$PROJECT_DIR$/project/public/img/ico-saved.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/markup/img/icon-arrow-select.svg" beforeDir="false" afterPath="$PROJECT_DIR$/project/public/img/icon-arrow-select.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/markup/img/icon-bookmark.svg" beforeDir="false" afterPath="$PROJECT_DIR$/project/public/img/icon-bookmark.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/markup/img/icon-star.svg" beforeDir="false" afterPath="$PROJECT_DIR$/project/public/img/icon-star.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/markup/img/logo.svg" beforeDir="false" afterPath="$PROJECT_DIR$/project/public/img/logo.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/markup/img/map-big.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/project/public/img/map-big.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/markup/img/map-big@2x.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/project/public/img/map-big@2x.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/markup/img/map.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/project/public/img/map.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/markup/img/map@2x.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/project/public/img/map@2x.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/markup/img/no-places.png" beforeDir="false" afterPath="$PROJECT_DIR$/project/public/img/no-places.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/markup/img/no-places@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/project/public/img/no-places@2x.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/markup/img/pin-active.svg" beforeDir="false" afterPath="$PROJECT_DIR$/project/public/img/pin-active.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/markup/img/pin.svg" beforeDir="false" afterPath="$PROJECT_DIR$/project/public/img/pin.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/markup/img/room-small.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/project/public/img/room-small.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/markup/img/room.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/project/public/img/room.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/markup/img/sprite.svg" beforeDir="false" afterPath="$PROJECT_DIR$/project/public/img/sprite.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/markup/img/star-active.svg" beforeDir="false" afterPath="$PROJECT_DIR$/project/public/img/star-active.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/markup/img/star-white.svg" beforeDir="false" afterPath="$PROJECT_DIR$/project/public/img/star-white.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/markup/img/stars-active.svg" beforeDir="false" afterPath="$PROJECT_DIR$/project/public/img/stars-active.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/markup/img/stars.svg" beforeDir="false" afterPath="$PROJECT_DIR$/project/public/img/stars.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/markup/img/studio-01.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/project/public/img/studio-01.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/markup/img/studio-photos.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/project/public/img/studio-photos.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/markup/img/triangle.svg" beforeDir="false" afterPath="$PROJECT_DIR$/project/public/img/triangle.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/markup/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/project/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/markup/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/markup/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/markup/main-empty.html" beforeDir="false" afterPath="$PROJECT_DIR$/markup/main-empty.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/markup/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/markup/main.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/markup/property-not-logged.html" beforeDir="false" afterPath="$PROJECT_DIR$/markup/property-not-logged.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/markup/property.html" beforeDir="false" afterPath="$PROJECT_DIR$/markup/property.html" afterDir="false" />
+    <list default="true" id="5725e6ee-9e6d-4638-8f4d-e20ecb0dfed2" name="Changes" comment="gotovo">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/components/offer/offer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/components/offer/offer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/pages/property/property.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/pages/property/property.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/pages/property_not_logged/property_not_logged.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/pages/property_not_logged/property_not_logged.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="TypeScript JSX File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -81,19 +33,29 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="fcf3a1f3-6e80-4446-9244-bc655fbaa9a2" name="Changes" comment="" />
+      <changelist id="5725e6ee-9e6d-4638-8f4d-e20ecb0dfed2" name="Changes" comment="" />
       <created>1657136778575</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1657136778575</updated>
       <workItem from="1657136785774" duration="431000" />
       <workItem from="1657454650228" duration="1093000" />
+      <workItem from="1657484825710" duration="14061000" />
     </task>
+    <task id="LOCAL-00001" summary="gotovo">
+      <created>1657736720489</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1657736720489</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -109,5 +71,10 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="gotovo" />
+    <option name="LAST_COMMIT_MESSAGE" value="gotovo" />
   </component>
 </project>
