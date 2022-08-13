@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5725e6ee-9e6d-4638-8f4d-e20ecb0dfed2" name="Changes" comment="gotovo">
-      <change afterPath="$PROJECT_DIR$/project/src/components/premium_panel/premium_panel.tsx" afterDir="false" />
+    <list default="true" id="5725e6ee-9e6d-4638-8f4d-e20ecb0dfed2" name="Changes" comment="Вынес в отдельный компонент приставку премиум">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/src/components/favorites_offer/favorites_offer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/components/favorites_offer/favorites_offer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/src/components/offer/offer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/components/offer/offer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/components/offer_list/offer_list.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/components/offer_list/offer_list.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,7 +81,7 @@
       <workItem from="1657990812051" duration="7239000" />
       <workItem from="1658250694302" duration="26676000" />
       <workItem from="1658870332496" duration="8124000" />
-      <workItem from="1660079084838" duration="20249000" />
+      <workItem from="1660079084838" duration="21399000" />
     </task>
     <task id="LOCAL-00001" summary="gotovo">
       <created>1657736720489</created>
@@ -120,7 +118,14 @@
       <option name="project" value="LOCAL" />
       <updated>1660381821812</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Вынес в отдельный компонент приставку премиум">
+      <created>1660416626923</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1660416626923</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -140,6 +145,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="gotovo" />
-    <option name="LAST_COMMIT_MESSAGE" value="gotovo" />
+    <MESSAGE value="Вынес в отдельный компонент приставку премиум" />
+    <option name="LAST_COMMIT_MESSAGE" value="Вынес в отдельный компонент приставку премиум" />
   </component>
 </project>
