@@ -1,9 +1,12 @@
+import { OfferArrayType } from '../../types/Offer';
+
 type MainPageOffer = {
   children: JSX.Element|JSX.Element[]
+  itemsArray: OfferArrayType
 }
 
 
-function MainPage({children}: MainPageOffer): JSX.Element {
+function MainPage({children, itemsArray}: MainPageOffer): JSX.Element {
   return (
     <body>
       <div style={{display: 'none'}}>
@@ -23,7 +26,7 @@ function MainPage({children}: MainPageOffer): JSX.Element {
             <div className="header__wrapper">
               <div className="header__left">
                 <a className="header__logo-link header__logo-link--active">
-                  <img className="header__logo" src="../project/public/img/logo.svg" alt="6 cities logo" width="81" height="41" />
+                  <img className="header__logo" src="img/logo.svg" alt="6 cities logo" width="81" height="41" />
                 </a>
               </div>
               <nav className="header__nav">
@@ -105,9 +108,7 @@ function MainPage({children}: MainPageOffer): JSX.Element {
                     <li className="places__option" tabIndex={0}>Top rated first</li>
                   </ul>
                 </form>
-                <div className="cities__places-list places__list tabs__content">
-                  {children}
-                </div>
+                {children}
               </section>
               <div className="cities__right-section">
                 <section className="cities__map map"></section>
