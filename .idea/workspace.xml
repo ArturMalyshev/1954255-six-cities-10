@@ -2,18 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5725e6ee-9e6d-4638-8f4d-e20ecb0dfed2" name="Changes" comment="gotovo">
-      <change afterPath="$PROJECT_DIR$/project/src/components/comment_form/comment_form.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/src/components/favorites_offer/favorites_offer.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/src/components/offer_list/offer_list.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/src/mocks/offer.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/src/types/Offer.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/project/src/components/premium_panel/premium_panel.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/components/favorites_offer/favorites_offer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/components/favorites_offer/favorites_offer.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/src/components/offer/offer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/components/offer/offer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/src/components/private_route/private_route.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/components/private_route/private_route.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/src/pages/favorites/favorites.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/pages/favorites/favorites.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/src/pages/main/main.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/pages/main/main.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/src/pages/property/property.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/pages/property/property.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,6 +21,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="module5-task1" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitSEFilterConfiguration">
@@ -86,7 +83,7 @@
       <workItem from="1657990812051" duration="7239000" />
       <workItem from="1658250694302" duration="26676000" />
       <workItem from="1658870332496" duration="8124000" />
-      <workItem from="1660079084838" duration="16356000" />
+      <workItem from="1660079084838" duration="20249000" />
     </task>
     <task id="LOCAL-00001" summary="gotovo">
       <created>1657736720489</created>
@@ -116,7 +113,14 @@
       <option name="project" value="LOCAL" />
       <updated>1658058662630</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="gotovo">
+      <created>1660381821811</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1660381821812</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
