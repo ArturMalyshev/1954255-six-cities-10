@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5725e6ee-9e6d-4638-8f4d-e20ecb0dfed2" name="Changes" comment="Вынес в отдельный компонент приставку премиум">
+    <list default="true" id="5725e6ee-9e6d-4638-8f4d-e20ecb0dfed2" name="Changes" comment="Исправил штуку с локацией">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/components/comment_form/comment_form.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/components/comment_form/comment_form.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/src/components/offer_list/offer_list.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/components/offer_list/offer_list.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -81,7 +82,7 @@
       <workItem from="1657990812051" duration="7239000" />
       <workItem from="1658250694302" duration="26676000" />
       <workItem from="1658870332496" duration="8124000" />
-      <workItem from="1660079084838" duration="21399000" />
+      <workItem from="1660079084838" duration="22865000" />
     </task>
     <task id="LOCAL-00001" summary="gotovo">
       <created>1657736720489</created>
@@ -125,7 +126,14 @@
       <option name="project" value="LOCAL" />
       <updated>1660416626923</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Исправил штуку с локацией">
+      <created>1660419909167</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1660419909167</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -146,6 +154,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="gotovo" />
     <MESSAGE value="Вынес в отдельный компонент приставку премиум" />
-    <option name="LAST_COMMIT_MESSAGE" value="Вынес в отдельный компонент приставку премиум" />
+    <MESSAGE value="Исправил штуку с локацией" />
+    <option name="LAST_COMMIT_MESSAGE" value="Исправил штуку с локацией" />
   </component>
 </project>

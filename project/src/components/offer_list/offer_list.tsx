@@ -6,10 +6,7 @@ import { useLocation } from 'react-router-dom';
 
 export default function OfferList(offerArray: OfferArrayType) : JSX.Element {
   const location = useLocation();
-  const [active, setActive] = useState(0);
-  if (active) {
-    document.body.setAttribute('lol', 'id');
-  }
+  const [, setActive] = useState(0);
   if (location.pathname === '/favorites') {
     const cities: string[] = [];
     offerArray.data.sort((a, b)=>{
