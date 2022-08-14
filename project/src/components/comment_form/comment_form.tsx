@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 export default function CommentForm (): JSX.Element {
-  const [, setContent] = useState({stars: 0, text: ''});
+  const [content, setContent] = useState({stars: 0, text: ''});
   return(
     <form className="reviews__form form" action="#" method="post">
       <label className="reviews__label form__label" htmlFor="review">Your review</label>
