@@ -2,13 +2,12 @@ import { OfferArrayType } from '../../types/Offer';
 import Offer from '../../components/offer/offer';
 import FavoriteOffer from '../../components/favorites_offer/favorites_offer';
 import React, { useState } from 'react';
+import { useLocation } from 'react-router-dom';
 
 export default function OfferList(offerArray: OfferArrayType) : JSX.Element {
-  const [active, setActive] = useState(0);
-  if (active) {
-    document.body.setAttribute('lol', 'id');
-  }
-  if (window.location.pathname === '/favorites') {
+  const location = useLocation();
+  const [, setActive] = useState(0);
+  if (location.pathname === '/favorites') {
     const cities: string[] = [];
     offerArray.data.sort((a, b)=>{
       cities.push(a.city);
