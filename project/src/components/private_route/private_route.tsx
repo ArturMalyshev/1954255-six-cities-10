@@ -6,10 +6,5 @@ type PrivateRouteType = {
 
 export default function PrivateRoute ({children}: PrivateRouteType) {
   const auth = true;
-
-  if (auth) {
-    return children;
-  } else {
-    return (<Navigate to={'/login'} />);
-  }
+  return auth ? children : (<Navigate to={'/login'} />);
 }

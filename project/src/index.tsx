@@ -2,31 +2,32 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
-import Offer from './components/offer/offer';
+import getMockOfferData from './mocks/offer';
+
+import { OfferArrayType } from './types/Offer';
+
 import PrivareRoute from './components/private_route/private_route';
+import OfferList from './components/offer_list/offer_list';
+import CommentForm from './components/comment_form/comment_form';
 
 import MainPage from './pages/main/main';
 import ErrorPage from './pages/error_404/error_404';
 import FavoritesPage from './pages/favorites/favorites';
 import LoginPage from './pages/login/login';
-import Property from './pages/property/property';
+import PropertyPage from './pages/property/property';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement,
 );
 
-export default function App() {
+export default function App(data: OfferArrayType) : JSX.Element {
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/">
           <Route index element = {
-            <MainPage>
-              <Offer />
-              <Offer />
-              <Offer />
-              <Offer />
-              <Offer />
+            <MainPage itemsArray={data}>
+              <OfferList data={data.data} />
             </MainPage>
           }
           />
@@ -39,14 +40,16 @@ export default function App() {
           <Route path="favorites">
             <Route index element = {
               <PrivareRoute>
-                <FavoritesPage />
+                <FavoritesPage>
+                  <OfferList data={data.data} />
+                </FavoritesPage>
               </PrivareRoute>
             }
             />
           </Route>
           <Route path="offer/:id">
             <Route index element = {
-              <Property />
+              <PropertyPage data={data.data} child={<CommentForm />}/>
             }
             />
           </Route>
@@ -57,4 +60,4 @@ export default function App() {
   );
 }
 
-root.render(<App />);
+root.render(<App data={getMockOfferData()} />);
