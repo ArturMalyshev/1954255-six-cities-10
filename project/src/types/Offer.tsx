@@ -1,6 +1,10 @@
 export type OfferType = {
   id: number,
   city: string,
+  location: {
+    latitude: number,
+    longitude: number,
+  },
   photo: string[],
   title: string,
   description: string,
