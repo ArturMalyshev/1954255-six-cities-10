@@ -1,17 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5725e6ee-9e6d-4638-8f4d-e20ecb0dfed2" name="Changes" comment="Исправил">
-      <change afterPath="$PROJECT_DIR$/project/src/components/map/map.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/src/hooks/useMap/useMap.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project/src/types/Map.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/project/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/project/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/src/mocks/offer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/mocks/offer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/src/pages/main/main.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/pages/main/main.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/src/types/Offer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/types/Offer.tsx" afterDir="false" />
-    </list>
+    <list default="true" id="5725e6ee-9e6d-4638-8f4d-e20ecb0dfed2" name="Changes" comment="готово" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -28,7 +18,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="module5-task1" />
+        <entry key="$PROJECT_DIR$" value="module4-task1" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -89,7 +79,7 @@
       <workItem from="1657990812051" duration="7239000" />
       <workItem from="1658250694302" duration="26676000" />
       <workItem from="1658870332496" duration="8124000" />
-      <workItem from="1660079084838" duration="30903000" />
+      <workItem from="1660079084838" duration="31234000" />
     </task>
     <task id="LOCAL-00001" summary="gotovo">
       <created>1657736720489</created>
@@ -154,7 +144,14 @@
       <option name="project" value="LOCAL" />
       <updated>1660474624512</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="готово">
+      <created>1660507629916</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1660507629916</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -177,6 +174,7 @@
     <MESSAGE value="Вынес в отдельный компонент приставку премиум" />
     <MESSAGE value="Исправил штуку с локацией" />
     <MESSAGE value="Исправил" />
-    <option name="LAST_COMMIT_MESSAGE" value="Исправил" />
+    <MESSAGE value="готово" />
+    <option name="LAST_COMMIT_MESSAGE" value="готово" />
   </component>
 </project>
