@@ -3,6 +3,7 @@ import {Icon, Marker} from 'leaflet';
 import useMap from './../../hooks/useMap/useMap';
 import {Points, Point} from './../../types/Map';
 import 'leaflet/dist/leaflet.css';
+import { useLocation } from 'react-router-dom';
 
 const defaultMapPosition = {
   latitude: 52.3809553943508,
@@ -56,5 +57,9 @@ export default function Map(props: MapProps): JSX.Element {
     }
   }, [map, points, selectedPoint]);
 
-  return <div className="cities__map" ref={mapRef}></div>;
+  if (useLocation().pathname === '/') {
+    return <div className="cities__map" ref={mapRef}></div>;
+  } else {
+    return <div className="property__map map" ref={mapRef}></div>;
+  }
 }

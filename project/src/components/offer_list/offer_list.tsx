@@ -2,13 +2,14 @@ import { OfferArrayType } from '../../types/Offer';
 import Offer from '../../components/offer/offer';
 import FavoriteOffer from '../../components/favorites_offer/favorites_offer';
 import React, { useState } from 'react';
+import { useLocation } from 'react-router-dom';
 
 export default function OfferList(offerArray: OfferArrayType) : JSX.Element {
-  const [active, setActive] = useState(0);
-  if (active) {
-    document.body.setAttribute('lol', 'id');
-  }
-  if (window.location.pathname === '/favorites') {
+  const [, setActive] = useState(0);
+
+  const location = useLocation().pathname;
+
+  if (location === '/favorites') {
     const cities: string[] = [];
     offerArray.data.sort((a, b)=>{
       cities.push(a.city);
@@ -50,13 +51,27 @@ export default function OfferList(offerArray: OfferArrayType) : JSX.Element {
         }
       </ul>
     );
-  } else {
+  } else if (location === '/') {
     return (
       <div className="cities__places-list places__list tabs__content">
         {
           offerArray.data.map((elem)=> <Offer event={ setActive } offerInfo={elem} key={elem.id}/>)
         }
       </div>
+    );
+  } else {
+    return (
+      <div className="container">
+        <section className="near-places places">
+          <h2 className="near-places__title">Other places in the neighbourhood</h2>
+          <div className="near-places__list places__list">
+            {
+              offerArray.data.map((elem)=> <Offer event={ setActive } offerInfo={elem} key={elem.id}/>)
+            }
+          </div>
+        </section>
+      </div>
+
     );
   }
 }

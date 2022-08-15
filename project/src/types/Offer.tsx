@@ -30,3 +30,15 @@ export type PropertyType = {
   data: OfferType[],
   child: JSX.Element
 }
+
+export type ReviewType = {
+    avatar: string,
+    name: string,
+    stars: number,
+    text: string,
+    date: string
+}
+
+export type ReviewArray = {
+  ReviewArray: ReviewType[]
+}

@@ -1,4 +1,4 @@
-import { OfferType } from '../types/Offer';
+import { OfferType, ReviewType } from '../types/Offer';
 
 export default function getMockOfferData () {
   const dataArray: OfferType[] = [
@@ -7,7 +7,7 @@ export default function getMockOfferData () {
       city: 'Amsterdam',
       location: {
         latitude: 52.3909553943508,
-        longitude: 4.85309666406198,
+        longitude: 4.85009666406198,
       },
       photo: [ // max 6
         'img/apartment-02.jpg',
@@ -42,7 +42,7 @@ export default function getMockOfferData () {
       city: 'Amsterdam',
       location: {
         latitude: 52.369553943508,
-        longitude: 4.85309666406198
+        longitude: 4.85509666406198
       },
       photo: [ // max 6
         'img/apartment-02.jpg',
@@ -75,8 +75,8 @@ export default function getMockOfferData () {
       id: 3,
       city: 'Kazan',
       location: {
-        latitude: 52.3909553943508,
-        longitude: 4.929309666406198
+        latitude: 52.3909553923508,
+        longitude: 4.909309666406198
       },
       photo: [ // max 6
         'img/apartment-03.jpg',
@@ -112,7 +112,7 @@ export default function getMockOfferData () {
       city: 'Moscow',
       location: {
         latitude: 52.3809553943508,
-        longitude: 4.939309666406198
+        longitude: 4.936309666406198
       },
       photo: [ // max 6
         'img/apartment-small-03.jpg',
@@ -150,8 +150,8 @@ export default function getMockOfferData () {
       id: 5,
       city: 'Moscow',
       location: {
-        latitude: 52.3909553943508,
-        longitude: 4.85309666406198,
+        latitude: 52.3609553043508,
+        longitude: 4.84309666406198,
       },
       photo: [ // max 6
         'img/apartment-small-04.jpg',
@@ -184,8 +184,8 @@ export default function getMockOfferData () {
       id: 6,
       city: 'Kazan',
       location: {
-        latitude: 52.3909553943508,
-        longitude: 4.85309666406198,
+        latitude: 52.3919551943508,
+        longitude: 4.85209666406198,
       },
       photo: [ // max 6
         'img/avatar-angelina.jpg',
@@ -219,3 +219,145 @@ export default function getMockOfferData () {
 
   return dataArray;
 }
+
+export const data: ReviewType[] = [
+  {
+    name: 'fdsfaffasf',
+    avatar: 'dfasfasfafadsfdsf',
+    text: 'sdfasfa sf fsdf asfsafas fsafsaf asfa sfsa fas fdsf ',
+    stars: 1,
+    date: 'April 2022'
+  },
+  {
+    name: 'rrrrrrrrrrrrrrr',
+    avatar: 'dfasfasfafadsfdsf',
+    text: 'sdfasfa sf fsdf asfsafas fsafsaf asfa sfsa fas fdsf ',
+    stars: 3,
+    date: 'April 2021'
+  },
+  {
+    name: '11111112312312',
+    avatar: 'dfasfasfafadsfdsf',
+    text: 'sdfasfa sf fsdf asfsafas fsafsaf asfa sfsa fas fdsf ',
+    stars: 5,
+    date: 'April 2020'
+  },
+  {
+    name: 'rgsdfgdsgfggsgf gsd ',
+    avatar: 'dfasfasfafadsfdsf',
+    text: 'sdfasfa sf fsdf asfsafas fsafsaf asfa sfsa fas fdsf ',
+    stars: 2,
+    date: 'April 2019'
+  },
+];
+
+export const closestOffers = [
+  {
+    id: 3,
+    city: 'Kazan',
+    location: {
+      latitude: 52.3909553923508,
+      longitude: 4.909309666406198
+    },
+    photo: [ // max 6
+      'img/apartment-03.jpg',
+      'img_path_1',
+      'img_path_1',
+      'img_path_1',
+      'img_path_1',
+      'img_path_1',
+    ],
+    title: 'Apartments in front of the ocean',
+    description: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using \'Content here, content here\', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for \'lorem ipsum\' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).',
+    premium: true, //
+    type: 'apartment', // apartment / room / house / hotel
+    rating: 4.9, // float 0-5
+    bedroomCount : '2 Bedroom',
+    maxGuests: 'Max 3 adult',
+    price: 370, // in euro
+    options: [
+      'Коврик при входе',
+      'Душ',
+      'Раковина',
+      'Посуда'
+    ],
+    ownerInfo: {
+      avatar: 'image',
+      name: 'Morty',
+      pro: true
+    },
+  },
+
+  {
+    id: 4,
+    city: 'Moscow',
+    location: {
+      latitude: 52.3809553943508,
+      longitude: 4.936309666406198
+    },
+    photo: [ // max 6
+      'img/apartment-small-03.jpg',
+      'img_path_1',
+      'img_path_1',
+      'img_path_1',
+      'img_path_1',
+      'img_path_1',
+    ],
+    title: 'Moscow city tower',
+    description: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using \'Content here, content here\', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for \'lorem ipsum\' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).',
+    premium: true, //
+    type: 'apartment', // apartment / room / house / hotel
+    rating: 4.9, // float 0-5
+    bedroomCount : '201 Bedroom',
+    maxGuests: 'Max 3079 adult',
+    price: 9999999999, // in euro
+    options: [
+      'Коврик при входе',
+      'Душ',
+      'Раковина',
+      'Посуда',
+      'Ресторан',
+      'Парковка',
+      'Собственный лифт',
+    ],
+    ownerInfo: {
+      avatar: 'image',
+      name: 'Agent 007',
+      pro: true
+    },
+  },
+
+  {
+    id: 5,
+    city: 'Moscow',
+    location: {
+      latitude: 52.3609553043508,
+      longitude: 4.84309666406198,
+    },
+    photo: [ // max 6
+      'img/apartment-small-04.jpg',
+      'img_path_1',
+      'img_path_1',
+      'img_path_1',
+      'img_path_1',
+      'img_path_1',
+    ],
+    title: 'Catsburg room',
+    description: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using \'Content here, content here\', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for \'lorem ipsum\' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).',
+    premium: false, //
+    type: 'room', // apartment / room / house / hotel
+    rating: 0.4, // float 0-5
+    bedroomCount : '0 Bedroom',
+    maxGuests: 'Max 1 adult',
+    price: 15, // in euro
+    options: [
+      'Коврик при входе',
+      '12 кошек'
+    ],
+    ownerInfo: {
+      avatar: 'image',
+      name: 'Cate',
+      pro: false
+    },
+  }
+]
