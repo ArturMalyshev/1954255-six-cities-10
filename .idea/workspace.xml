@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5725e6ee-9e6d-4638-8f4d-e20ecb0dfed2" name="Changes" comment="Исправил штуку с локацией">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/src/components/comment_form/comment_form.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/components/comment_form/comment_form.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/src/components/offer_list/offer_list.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/components/offer_list/offer_list.tsx" afterDir="false" />
-    </list>
+    <list default="true" id="5725e6ee-9e6d-4638-8f4d-e20ecb0dfed2" name="Changes" comment="готово" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -22,7 +18,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="module5-task1" />
+        <entry key="$PROJECT_DIR$" value="module4-task1" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -63,6 +59,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="npm.start" />
+        <item itemvalue="npm.start" />
       </list>
     </recent_temporary>
   </component>
@@ -82,7 +79,7 @@
       <workItem from="1657990812051" duration="7239000" />
       <workItem from="1658250694302" duration="26676000" />
       <workItem from="1658870332496" duration="8124000" />
-      <workItem from="1660079084838" duration="22865000" />
+      <workItem from="1660079084838" duration="31234000" />
     </task>
     <task id="LOCAL-00001" summary="gotovo">
       <created>1657736720489</created>
@@ -133,7 +130,28 @@
       <option name="project" value="LOCAL" />
       <updated>1660419909167</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Исправил">
+      <created>1660474595549</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1660474595549</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Исправил">
+      <created>1660474624512</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1660474624512</updated>
+    </task>
+    <task id="LOCAL-00010" summary="готово">
+      <created>1660507629916</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1660507629916</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -155,6 +173,8 @@
     <MESSAGE value="gotovo" />
     <MESSAGE value="Вынес в отдельный компонент приставку премиум" />
     <MESSAGE value="Исправил штуку с локацией" />
-    <option name="LAST_COMMIT_MESSAGE" value="Исправил штуку с локацией" />
+    <MESSAGE value="Исправил" />
+    <MESSAGE value="готово" />
+    <option name="LAST_COMMIT_MESSAGE" value="готово" />
   </component>
 </project>
