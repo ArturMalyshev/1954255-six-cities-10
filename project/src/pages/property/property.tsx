@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import { data } from './../../mocks/offer';
 import { closestOffers } from './../../mocks/offer';
 
+import PremiumPanel from './../../components/premium_panel/premium_panel';
 import ReviewList from './../../components/review_list/review_list';
 import Map from './../../components/map/map';
 import OfferList from './../../components/offer_list/offer_list';
@@ -51,16 +52,13 @@ function PropertyPage(offerInfo: PropertyType): JSX.Element {
                     <div className="property__image-wrapper" key={ offer.id }>
                       <img className="property__image" src={ elem } alt="Photo studio" />
                     </div>
-                  )
-                  )
+                  ))
                 }
               </div>
             </div>
             <div className="property__container container">
               <div className="property__wrapper">
-                {
-                  offer.premium ? <div className="property__mark"><span>Premium</span></div> : false
-                }
+                <PremiumPanel premium={offer.premium} />
                 <div className="property__name-wrapper">
                   <h1 className="property__name">{ offer.title }</h1>
                   <button className="property__bookmark-button button" type="button">
