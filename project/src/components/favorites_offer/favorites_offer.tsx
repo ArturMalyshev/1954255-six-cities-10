@@ -1,4 +1,5 @@
 import { OfferType } from '../../types/Offer';
+import PremiumPanel from './../premium_panel/premium_panel';
 
 type OfferInfoType = {
   offerInfo: OfferType;
@@ -7,13 +8,7 @@ type OfferInfoType = {
 export default function FavoritesOffer (offerInfo: OfferInfoType) {
   return (
     <article className="favorites__card place-card">
-      {
-        offerInfo.offerInfo.premium ?
-          <div className="place-card__mark">
-            <span>Premium</span>
-          </div>
-          : false
-      }
+      <PremiumPanel premium={ offerInfo.offerInfo.premium } />
       <div className="favorites__image-wrapper place-card__image-wrapper">
         <a href="#">
           <img className="place-card__image" src={ offerInfo.offerInfo.photo[0] } width="150" height="110" alt="Place image" />
