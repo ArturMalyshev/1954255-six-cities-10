@@ -360,4 +360,4 @@ export const closestOffers = [
       pro: false
     },
   }
-]
+];
