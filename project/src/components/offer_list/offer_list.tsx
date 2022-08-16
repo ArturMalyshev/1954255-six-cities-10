@@ -5,6 +5,7 @@ import React, { useState } from 'react';
 import { useLocation } from 'react-router-dom';
 
 export default function OfferList(offerArray: OfferArrayType) : JSX.Element {
+
   const [, setActive] = useState(0);
 
   const location = useLocation().pathname;

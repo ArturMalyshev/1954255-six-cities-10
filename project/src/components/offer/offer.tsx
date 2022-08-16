@@ -1,5 +1,6 @@
 import { OfferType } from '../../types/Offer';
 import { useLocation } from 'react-router-dom';
+import PremiumPanel from '../premium_panel/premium_panel';
 
 type OfferInfoType = {
   offerInfo: OfferType;
@@ -10,13 +11,7 @@ export default function Offer(offerInfo: OfferInfoType): JSX.Element {
   const location = useLocation().pathname;
   return (
     <article className={location === '/' ? 'cities__card place-card' : 'near-places__card place-card'} onMouseEnter={ () => offerInfo.event(offerInfo.offerInfo.id) }>
-      {
-        offerInfo.offerInfo.premium ?
-          <div className="place-card__mark">
-            <span>Premium</span>
-          </div>
-          : false
-      }
+      <PremiumPanel premium={ offerInfo.offerInfo.premium } />
       <div className={location === '/' ? 'cities__image-wrapper place-card__image-wrapper' : 'near-places__image-wrapper place-card__image-wrapper'}>
         <a href={ `/offer/${offerInfo.offerInfo.id}` }>
           <img className="place-card__image" src={offerInfo.offerInfo.photo[0]} width="260" height="200" alt="Place image" />
