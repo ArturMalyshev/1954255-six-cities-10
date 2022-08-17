@@ -8,9 +8,9 @@ export default function OfferList(offerArray: OfferArrayType) : JSX.Element {
 
   const [, setActive] = useState(0);
 
-  const location = useLocation().pathname;
+  const { pathname } = useLocation();
 
-  if (location === '/favorites') {
+  if (pathname === '/favorites') {
     const cities: string[] = [];
     offerArray.data.sort((a, b)=>{
       cities.push(a.city);
@@ -52,7 +52,7 @@ export default function OfferList(offerArray: OfferArrayType) : JSX.Element {
         }
       </ul>
     );
-  } else if (location === '/') {
+  } else if (pathname === '/') {
     return (
       <div className="cities__places-list places__list tabs__content">
         {

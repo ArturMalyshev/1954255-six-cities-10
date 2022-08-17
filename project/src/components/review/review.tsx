@@ -1,32 +1,12 @@
 import { ReviewType } from './../../types/Offer';
 
-type data = {
+type reviewData = {
   info: ReviewType
 }
 
-export default function Review ( reviewData: data )
+export default function Review ( reviewData: reviewData )
 {
-  let stars = '';
-  switch (reviewData.info.stars) {
-    case 0:
-      stars = '0%';
-      break;
-    case 1:
-      stars = '20%';
-      break;
-    case 2:
-      stars = '40%';
-      break;
-    case 3:
-      stars = '60%';
-      break;
-    case 4:
-      stars = '80%';
-      break;
-    case 5:
-      stars = '100%';
-      break;
-  }
+  const stars = `${reviewData.info.stars * 20}%`;
 
   return(
     <li className="reviews__item">

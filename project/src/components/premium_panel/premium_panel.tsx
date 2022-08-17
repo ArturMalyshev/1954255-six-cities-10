@@ -5,15 +5,14 @@ type premium = {
 }
 
 export default function PremiumPanel (data: premium) : JSX.Element | null {
-  const location = useLocation().pathname;
+  const { pathname } = useLocation();
 
-  if (data) {
-    if (location === '/' || location === '/favorites') {
-      return ( <div className="place-card__mark"><span>Premium</span></div> );
-    } else {
-      return ( <div className="property__mark"><span>Premium</span></div> );
-    }
-  } else {
+  if (!data) {
     return null;
   }
+
+  const premiumCn = pathname === '/' || pathname === '/favorites' ? 'place-card__mark' : 'property__mark';
+  return (
+    <div className={premiumCn}><span>Premium</span></div>
+  );
 }

@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5725e6ee-9e6d-4638-8f4d-e20ecb0dfed2" name="Changes" comment="почему-то исрпавления с предыдущей ветки не перенеслись в мастер" />
+    <list default="true" id="5725e6ee-9e6d-4638-8f4d-e20ecb0dfed2" name="Changes" comment="исправил ошибку">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/components/map/map.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/components/map/map.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/components/offer/offer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/components/offer/offer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/components/offer_list/offer_list.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/components/offer_list/offer_list.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/components/premium_panel/premium_panel.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/components/premium_panel/premium_panel.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/components/review/review.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/components/review/review.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/components/review_list/review_list.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/components/review_list/review_list.tsx" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -44,10 +52,20 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
+    <property name="ts.external.directory.path" value="$PROJECT_DIR$/project/node_modules/typescript/lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="npm.start">
+    <configuration name="lint" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/project/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="lint" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
     <configuration name="start" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/project/package.json" />
       <command value="run" />
@@ -61,6 +79,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="npm.start" />
+        <item itemvalue="npm.lint" />
         <item itemvalue="npm.start" />
         <item itemvalue="npm.start" />
       </list>
@@ -84,6 +103,7 @@
       <workItem from="1658870332496" duration="8124000" />
       <workItem from="1660079084838" duration="31922000" />
       <workItem from="1660579421047" duration="10604000" />
+      <workItem from="1660687814502" duration="3279000" />
     </task>
     <task id="LOCAL-00001" summary="gotovo">
       <created>1657736720489</created>
@@ -176,7 +196,14 @@
       <option name="project" value="LOCAL" />
       <updated>1660609485293</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="исправил ошибку">
+      <created>1660628108337</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1660628108337</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -201,6 +228,7 @@
     <MESSAGE value="Исправил" />
     <MESSAGE value="готово" />
     <MESSAGE value="почему-то исрпавления с предыдущей ветки не перенеслись в мастер" />
-    <option name="LAST_COMMIT_MESSAGE" value="почему-то исрпавления с предыдущей ветки не перенеслись в мастер" />
+    <MESSAGE value="исправил ошибку" />
+    <option name="LAST_COMMIT_MESSAGE" value="исправил ошибку" />
   </component>
 </project>

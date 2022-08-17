@@ -57,9 +57,9 @@ export default function Map(props: MapProps): JSX.Element {
     }
   }, [map, points, selectedPoint]);
 
-  if (useLocation().pathname === '/') {
-    return <div className="cities__map" ref={mapRef}></div>;
-  } else {
-    return <div className="property__map map" ref={mapRef}></div>;
-  }
+  const { pathname } = useLocation();
+  const mapCn = pathname === '/' ? 'cities__map' : 'property_map map';
+
+  return (<div className={mapCn} ref={mapRef} />);
+
 }
