@@ -1,4 +1,5 @@
 import {City} from './Map';
+import getMockOfferData, {DEFAULT_CITY, SORT_BY_POPULAR} from "../mocks/offer";
 
 export type OfferType = {
   id: number,
@@ -50,4 +51,16 @@ export type CityArray = {
   changeCityAction: CallableFunction
   currentCity: string,
   dispatcher: CallableFunction,
+}
+
+export type SortType = {
+  dispatcher: CallableFunction,
+  changeSortAction: CallableFunction,
+}
+
+export type StateType = {
+  city: string,
+  offerArray: OfferType[],
+  sortType: string,
+  active : number | undefined
 }

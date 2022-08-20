@@ -1,7 +1,7 @@
 import {useRef, useEffect} from 'react';
 import {Icon, Marker} from 'leaflet';
 import useMap from './../../hooks/useMap/useMap';
-import {Points, Point} from './../../types/Map';
+import {Points, Point} from '../../types/Map';
 import 'leaflet/dist/leaflet.css';
 import { useLocation } from 'react-router-dom';
 
@@ -11,8 +11,8 @@ const defaultMapPosition = {
   zoom: 10,
 };
 
-const URL_MARKER_DEFAULT = 'https://assets.htmlacademy.ru/content/intensive/javascript-1/demo/interactive-map/pin.svg';
-const URL_MARKER_CURRENT = 'https://assets.htmlacademy.ru/content/intensive/javascript-1/demo/interactive-map/main-pin.svg';
+const URL_MARKER_DEFAULT = 'img/pin.svg';
+const URL_MARKER_CURRENT = 'img/pin-active.svg';
 
 
 type MapProps = {
@@ -22,14 +22,14 @@ type MapProps = {
 
 const defaultCustomIcon = new Icon({
   iconUrl: URL_MARKER_DEFAULT,
-  iconSize: [40, 40],
-  iconAnchor: [20, 40]
+  iconSize: [40, 60],
+  iconAnchor: [20, 60]
 });
 
 const currentCustomIcon = new Icon({
   iconUrl: URL_MARKER_CURRENT,
-  iconSize: [40, 40],
-  iconAnchor: [20, 40]
+  iconSize: [40, 60],
+  iconAnchor: [20, 60]
 });
 
 export default function Map(props: MapProps): JSX.Element {

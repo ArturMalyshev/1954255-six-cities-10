@@ -403,3 +403,9 @@ export const citiesList: City[] = [
 ];
 
 export const DEFAULT_CITY = 'Paris';
+
+export const SORT_BY_POPULAR = 'Popular';
+export const SORT_BY_PRICE_LOW_TO_HIGH = 'Low to high';
+export const SORT_BY_PRICE_HIGH_TO_LOW = 'High to low';
+export const SORT_BY_RATE = 'Top rated first';
+

@@ -1,14 +1,15 @@
 import { OfferArrayType } from '../../types/Offer';
 import Offer from '../../components/offer/offer';
 import FavoriteOffer from '../../components/favorites_offer/favorites_offer';
-import React, { useState } from 'react';
+import React from 'react';
 import { useLocation } from 'react-router-dom';
+import {useAppDispatch} from '../../hooks/redux/redux';
+import {onChangeActiveOffer} from '../../store/action';
 
 export default function OfferList(offerArray: OfferArrayType) : JSX.Element {
 
-  const [, setActive] = useState(0);
-
   const { pathname } = useLocation();
+  const dispatcher = useAppDispatch();
 
   if (pathname === '/favorites') {
     const cities: string[] = [];
@@ -56,7 +57,7 @@ export default function OfferList(offerArray: OfferArrayType) : JSX.Element {
     return (
       <div className="cities__places-list places__list tabs__content">
         {
-          offerArray.data.map((elem)=> <Offer event={ setActive } offerInfo={elem} key={elem.id}/>)
+          offerArray.data.map((elem)=> <Offer offerInfo={elem} dispatcher={dispatcher} changeActiveOffer={onChangeActiveOffer} key={elem.id}/>)
         }
       </div>
     );
@@ -67,7 +68,7 @@ export default function OfferList(offerArray: OfferArrayType) : JSX.Element {
           <h2 className="near-places__title">Other places in the neighbourhood</h2>
           <div className="near-places__list places__list">
             {
-              offerArray.data.map((elem)=> <Offer event={ setActive } offerInfo={elem} key={elem.id}/>)
+              offerArray.data.map((elem)=> <Offer dispatcher={dispatcher} changeActiveOffer={onChangeActiveOffer} offerInfo={elem} key={elem.id}/>)
             }
           </div>
         </section>

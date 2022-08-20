@@ -1,7 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5725e6ee-9e6d-4638-8f4d-e20ecb0dfed2" name="Changes" comment="Готово" />
+    <list default="true" id="5725e6ee-9e6d-4638-8f4d-e20ecb0dfed2" name="Changes" comment="Готово">
+      <change afterPath="$PROJECT_DIR$/project/src/components/sort/sort.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/components/map/map.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/components/map/map.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/components/offer/offer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/components/offer/offer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/components/offer_list/offer_list.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/components/offer_list/offer_list.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/mocks/offer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/mocks/offer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/pages/main/main.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/pages/main/main.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/store/action.ts" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/store/action.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/store/reducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/store/reducer.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/types/Offer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/types/Offer.tsx" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -12,8 +23,8 @@
       <list>
         <option value="package.json" />
         <option value="TypeScript JSX File" />
-        <option value="TypeScript JSX File" />
         <option value="TypeScript File" />
+        <option value="TypeScript JSX File" />
       </list>
     </option>
   </component>
@@ -46,6 +57,11 @@
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/project/node_modules/typescript/lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/project/src/components" />
+    </key>
   </component>
   <component name="RunManager" selected="npm.lint">
     <configuration name="lint" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
@@ -95,7 +111,7 @@
       <workItem from="1658870332496" duration="8124000" />
       <workItem from="1660079084838" duration="31922000" />
       <workItem from="1660579421047" duration="10604000" />
-      <workItem from="1660687814502" duration="26688000" />
+      <workItem from="1660687814502" duration="33452000" />
     </task>
     <task id="LOCAL-00001" summary="gotovo">
       <created>1657736720489</created>
@@ -223,7 +239,14 @@
       <option name="project" value="LOCAL" />
       <updated>1661012905291</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Готово">
+      <created>1661015037401</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1661015037401</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
