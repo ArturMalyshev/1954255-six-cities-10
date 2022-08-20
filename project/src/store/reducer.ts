@@ -1,6 +1,6 @@
 import {createReducer} from '@reduxjs/toolkit';
 import getMockOfferData from '../mocks/offer';
-import { changeCity } from './action';
+import { onChangeCity } from './action';
 import { DEFAULT_CITY } from '../mocks/offer';
 
 
@@ -11,7 +11,7 @@ const initialState = {
 
 
 export const reducer = createReducer(initialState, (builder) => {
-  builder.addCase(changeCity, (state, action) => {
+  builder.addCase(onChangeCity, (state, action) => {
     state.city = action.payload.city;
     state.offerArray = getMockOfferData().filter((elem) => elem.city === action.payload.city);
   });

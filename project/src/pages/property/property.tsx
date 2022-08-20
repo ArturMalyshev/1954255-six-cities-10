@@ -1,7 +1,7 @@
 import { PropertyType } from '../../types/Offer';
 import { useParams } from 'react-router-dom';
-import { data } from './../../mocks/offer';
-import { closestOffers } from './../../mocks/offer';
+import { data } from '../../mocks/offer';
+import { closestOffers } from '../../mocks/offer';
 
 import PremiumPanel from './../../components/premium_panel/premium_panel';
 import ReviewList from './../../components/review_list/review_list';
@@ -28,7 +28,7 @@ function PropertyPage(offerInfo: PropertyType): JSX.Element {
                 <ul className="header__nav-list">
                   <li className="header__nav-item user">
                     <a className="header__nav-link header__nav-link--profile" href="#">
-                      <div className="header__avatar-wrapper user__avatar-wrapper"></div>
+                      <div className="header__avatar-wrapper user__avatar-wrapper"/>
                       <span className="header__user-name user__name">Oliver.conner@gmail.com</span>
                       <span className="header__favorite-count">3</span>
                     </a>
@@ -109,8 +109,8 @@ function PropertyPage(offerInfo: PropertyType): JSX.Element {
                 </div>
                 <ReviewList ReviewArray={ data } />
               </div>
+              <Map points={[offerInfo.data[0], offerInfo.data[1], offerInfo.data[2] ]} />
             </div>
-            <Map points={[offerInfo.data[0], offerInfo.data[1], offerInfo.data[2] ]} selectedPoint={ undefined } />
           </section>
           <div className="container">
             <OfferList data={closestOffers}/>

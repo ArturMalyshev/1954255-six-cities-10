@@ -1,4 +1,4 @@
-import {changeCity} from '../../store/action';
+import {onChangeCity} from '../../store/action';
 import {CityArray} from '../../types/Offer';
 
 export default function Cities (cityList: CityArray) {
@@ -8,10 +8,10 @@ export default function Cities (cityList: CityArray) {
     <section className="locations container">
       <ul className="locations__list tabs__list">
         {
-          cityList.cityArray.map((cityName) => (
-            <li className="locations__item" key={cityName.name}>
-              <a className={`locations__item-link tabs__item ${ city === cityName.name ? 'tabs__item--active' : false }`} href="#" onClick={()=>cityList.dispatcher(changeCity({city: cityName.name}))} key={city}>
-                <span>{cityName.name}</span>
+          cityList.cityArray.map(({name}) => (
+            <li className="locations__item" key={name}>
+              <a className={`locations__item-link tabs__item ${ city === name ? 'tabs__item--active' : '' }`} href="#" onClick={()=>cityList.dispatcher(onChangeCity({city: name}))} key={city}>
+                <span>{name}</span>
               </a>
             </li>
           ))

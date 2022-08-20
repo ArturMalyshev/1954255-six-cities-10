@@ -2,7 +2,7 @@ import { OfferArrayType } from '../../types/Offer';
 import { citiesList } from '../../mocks/offer';
 import Cities from './../../components/cities/cities';
 import Map from './../../components/map/map';
-import {changeCity} from '../../store/action';
+import {onChangeCity} from '../../store/action';
 import {useAppDispatch, useAppSelector} from '../../hooks/redux/redux';
 
 type MainPageOffer = {
@@ -12,6 +12,8 @@ type MainPageOffer = {
 
 
 function MainPage({children, itemsArray}: MainPageOffer): JSX.Element {
+  const thisCityOfferCount = useAppSelector((state) => state.offerArray.length);
+  const thisCityName = useAppSelector((state) => state.city);
   return (
     <body>
       <div style={{display: 'none'}}>
@@ -58,13 +60,13 @@ function MainPage({children, itemsArray}: MainPageOffer): JSX.Element {
         <main className="page__main page__main--index">
           <h1 className="visually-hidden">Cities</h1>
           <div className="tabs">
-            <Cities changeCityAction={changeCity} cityArray={ citiesList } currentCity={useAppSelector((state) => state.city)} dispatcher={useAppDispatch()}/>
+            <Cities changeCityAction={onChangeCity} cityArray={ citiesList } currentCity={useAppSelector((state) => state.city)} dispatcher={useAppDispatch()}/>
           </div>
           <div className="cities">
             <div className="cities__places-container container">
               <section className="cities__places places">
                 <h2 className="visually-hidden">Places</h2>
-                <b className="places__found">{ useAppSelector((state) => state.offerArray.length) } places to stay in { useAppSelector((state) => state.city) }</b>
+                <b className="places__found">{ thisCityOfferCount } places to stay in { thisCityName }</b>
                 <form className="places__sorting" action="#" method="get">
                   <span className="places__sorting-caption">Sort by</span>
                   <span className="places__sorting-type" tabIndex={0}>

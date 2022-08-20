@@ -1,5 +1,5 @@
 import {createAction} from '@reduxjs/toolkit';
 
-export const changeCity = createAction<{city: string}>('city/change');
+export const onChangeCity = createAction<{city: string}>('city/change');
 
 

@@ -17,7 +17,7 @@ const URL_MARKER_CURRENT = 'https://assets.htmlacademy.ru/content/intensive/java
 
 type MapProps = {
   points: Points;
-  selectedPoint: Point | undefined;
+  selectedPoint?: Point;
 };
 
 const defaultCustomIcon = new Icon({
@@ -59,7 +59,8 @@ export default function Map(props: MapProps): JSX.Element {
 
   const { pathname } = useLocation();
   const mapCn = pathname === '/' ? 'cities__map' : 'property_map map';
+  const styleSettings = pathname === '/' ? undefined : {height: '500px'};
 
-  return (<div className={mapCn} ref={mapRef} />);
+  return (<div className={mapCn} ref={mapRef} style={styleSettings} />);
 
 }

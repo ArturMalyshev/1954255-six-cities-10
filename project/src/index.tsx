@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Provider } from 'react-redux';
-
+import {useAppSelector} from './hooks/redux/redux';
 import { store } from './store/index';
 
 import getMockOfferData from './mocks/offer';
@@ -30,7 +30,7 @@ export default function App(data: OfferArrayType) : JSX.Element {
         <Route path="/">
           <Route index element = {
             <MainPage itemsArray={data}>
-              <OfferList data={data.data} />
+              <OfferList data={useAppSelector((state) => state.offerArray)} />
             </MainPage>
           }
           />
