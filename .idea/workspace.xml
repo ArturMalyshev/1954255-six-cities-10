@@ -1,17 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5725e6ee-9e6d-4638-8f4d-e20ecb0dfed2" name="Changes" comment="Готово">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/src/components/cities/cities.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/components/cities/cities.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/src/components/map/map.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/components/map/map.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/src/components/offer_list/offer_list.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/components/offer_list/offer_list.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/src/pages/main/main.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/pages/main/main.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/src/pages/property/property.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/pages/property/property.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/src/store/action.ts" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/store/action.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/src/store/reducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/store/reducer.ts" afterDir="false" />
-    </list>
+    <list default="true" id="5725e6ee-9e6d-4638-8f4d-e20ecb0dfed2" name="Changes" comment="Готово" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -105,7 +95,7 @@
       <workItem from="1658870332496" duration="8124000" />
       <workItem from="1660079084838" duration="31922000" />
       <workItem from="1660579421047" duration="10604000" />
-      <workItem from="1660687814502" duration="26324000" />
+      <workItem from="1660687814502" duration="26688000" />
     </task>
     <task id="LOCAL-00001" summary="gotovo">
       <created>1657736720489</created>
@@ -226,7 +216,14 @@
       <option name="project" value="LOCAL" />
       <updated>1660993606237</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Готово">
+      <created>1661012905291</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1661012905291</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

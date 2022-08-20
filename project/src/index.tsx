@@ -24,13 +24,14 @@ const root = ReactDOM.createRoot(
 );
 
 export default function App(data: OfferArrayType) : JSX.Element {
+  const offerArray = useAppSelector((state) => state.offerArray);
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/">
           <Route index element = {
             <MainPage itemsArray={data}>
-              <OfferList data={useAppSelector((state) => state.offerArray)} />
+              <OfferList data={offerArray} />
             </MainPage>
           }
           />

@@ -12,8 +12,8 @@ type MainPageOffer = {
 
 
 function MainPage({children, itemsArray}: MainPageOffer): JSX.Element {
-  const thisCityOfferCount = useAppSelector((state) => state.offerArray.length);
-  const thisCityName = useAppSelector((state) => state.city);
+  const selectedCityOfferArray = useAppSelector((state) => state.offerArray);
+  const selectedCityName = useAppSelector((state) => state.city);
   return (
     <body>
       <div style={{display: 'none'}}>
@@ -60,13 +60,13 @@ function MainPage({children, itemsArray}: MainPageOffer): JSX.Element {
         <main className="page__main page__main--index">
           <h1 className="visually-hidden">Cities</h1>
           <div className="tabs">
-            <Cities changeCityAction={onChangeCity} cityArray={ citiesList } currentCity={useAppSelector((state) => state.city)} dispatcher={useAppDispatch()}/>
+            <Cities changeCityAction={onChangeCity} cityArray={ citiesList } currentCity={ selectedCityName } dispatcher={useAppDispatch()}/>
           </div>
           <div className="cities">
             <div className="cities__places-container container">
               <section className="cities__places places">
                 <h2 className="visually-hidden">Places</h2>
-                <b className="places__found">{ thisCityOfferCount } places to stay in { thisCityName }</b>
+                <b className="places__found">{ selectedCityOfferArray.length } places to stay in { selectedCityName }</b>
                 <form className="places__sorting" action="#" method="get">
                   <span className="places__sorting-caption">Sort by</span>
                   <span className="places__sorting-type" tabIndex={0}>
@@ -85,7 +85,7 @@ function MainPage({children, itemsArray}: MainPageOffer): JSX.Element {
                 {children}
               </section>
               <div className="cities__right-section">
-                <Map points={ useAppSelector((state) => state.offerArray) } selectedPoint={ undefined } />
+                <Map points={ selectedCityOfferArray } selectedPoint={ undefined } />
               </div>
             </div>
           </div>
