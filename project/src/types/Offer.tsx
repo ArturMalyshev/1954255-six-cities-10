@@ -1,4 +1,4 @@
-import {City} from "./Map";
+import {City} from './Map';
 
 export type OfferType = {
   id: number,
@@ -47,7 +47,7 @@ export type ReviewArray = {
 
 export type CityArray = {
   cityArray: City[],
-  changeCityAction: Function
+  changeCityAction: CallableFunction
   currentCity: string,
-  dispatcher: Function,
+  dispatcher: CallableFunction,
 }
