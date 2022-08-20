@@ -110,7 +110,7 @@ function PropertyPage(offerInfo: PropertyType): JSX.Element {
                 <ReviewList ReviewArray={ data } />
               </div>
             </div>
-            <Map points={[offerInfo.data[0], offerInfo.data[1], offerInfo.data[2] ]} selectedPoint={ undefined }/>
+            <Map points={[offerInfo.data[0], offerInfo.data[1], offerInfo.data[2] ]} selectedPoint={ undefined } />
           </section>
           <div className="container">
             <OfferList data={closestOffers}/>

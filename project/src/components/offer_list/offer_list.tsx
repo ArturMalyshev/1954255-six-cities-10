@@ -4,6 +4,8 @@ import FavoriteOffer from '../../components/favorites_offer/favorites_offer';
 import React, { useState } from 'react';
 import { useLocation } from 'react-router-dom';
 
+import { store } from '../../store/index';
+
 export default function OfferList(offerArray: OfferArrayType) : JSX.Element {
 
   const [, setActive] = useState(0);
@@ -56,7 +58,7 @@ export default function OfferList(offerArray: OfferArrayType) : JSX.Element {
     return (
       <div className="cities__places-list places__list tabs__content">
         {
-          offerArray.data.map((elem)=> <Offer event={ setActive } offerInfo={elem} key={elem.id}/>)
+          store.getState().offerArray.map((elem)=> <Offer event={ setActive } offerInfo={elem} key={elem.id}/>)
         }
       </div>
     );

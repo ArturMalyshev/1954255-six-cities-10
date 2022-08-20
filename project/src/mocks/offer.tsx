@@ -1,4 +1,5 @@
 import { OfferType, ReviewType } from '../types/Offer';
+import {City} from '../types/Map';
 
 export default function getMockOfferData () {
   const dataArray: OfferType[] = [
@@ -73,7 +74,7 @@ export default function getMockOfferData () {
 
     {
       id: 3,
-      city: 'Kazan',
+      city: 'Paris',
       location: {
         latitude: 52.3909553923508,
         longitude: 4.909309666406198
@@ -109,7 +110,7 @@ export default function getMockOfferData () {
 
     {
       id: 4,
-      city: 'Moscow',
+      city: 'Brussels',
       location: {
         latitude: 52.3809553943508,
         longitude: 4.936309666406198
@@ -148,7 +149,7 @@ export default function getMockOfferData () {
 
     {
       id: 5,
-      city: 'Moscow',
+      city: 'Dusseldorf',
       location: {
         latitude: 52.3609553043508,
         longitude: 4.84309666406198,
@@ -182,7 +183,7 @@ export default function getMockOfferData () {
 
     {
       id: 6,
-      city: 'Kazan',
+      city: 'Dusseldorf',
       location: {
         latitude: 52.3919551943508,
         longitude: 4.85209666406198,
@@ -254,7 +255,7 @@ export const data: ReviewType[] = [
 export const closestOffers = [
   {
     id: 3,
-    city: 'Kazan',
+    city: 'Brussels',
     location: {
       latitude: 52.3909553923508,
       longitude: 4.909309666406198
@@ -329,7 +330,7 @@ export const closestOffers = [
 
   {
     id: 5,
-    city: 'Moscow',
+    city: 'Cologne',
     location: {
       latitude: 52.3609553043508,
       longitude: 4.84309666406198,
@@ -361,3 +362,44 @@ export const closestOffers = [
     },
   }
 ];
+
+export const citiesList: City[] = [
+  {
+    name:'Paris',
+    latitude: 52.3809553933508,
+    longitude: 4.939309666406198,
+    zoom: 10,
+  },
+  {
+    name:'Cologne',
+    latitude: 52.3809552943508,
+    longitude: 4.939309666406198,
+    zoom: 10,
+  },
+  {
+    name:'Brussels',
+    latitude: 52.3809553944844,
+    longitude: 4.939309666406198,
+    zoom: 10,
+  },
+  {
+    name:'Amsterdam',
+    latitude: 52.3809551243508,
+    longitude: 4.939309666406198,
+    zoom: 10,
+  },
+  {
+    name:'Hamburg',
+    latitude: 51.3609553933508,
+    longitude: 5.919309666406198,
+    zoom: 10,
+  },
+  {
+    name:'Dusseldorf',
+    latitude: 52.3809543943508,
+    longitude: 4.939309666406198,
+    zoom: 10,
+  },
+];
+
+export const DEFAULT_CITY = 'Paris';

@@ -1,6 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { Provider } from 'react-redux';
+
+import { store } from './store/index';
 
 import getMockOfferData from './mocks/offer';
 
@@ -60,4 +63,4 @@ export default function App(data: OfferArrayType) : JSX.Element {
   );
 }
 
-root.render(<App data={getMockOfferData()} />);
+root.render(<Provider store={store}><App data={getMockOfferData()} /></Provider>);
