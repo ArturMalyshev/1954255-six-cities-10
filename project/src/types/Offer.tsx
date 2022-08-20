@@ -1,5 +1,4 @@
 import {City} from './Map';
-import getMockOfferData, {DEFAULT_CITY, SORT_BY_POPULAR} from "../mocks/offer";
 
 export type OfferType = {
   id: number,
