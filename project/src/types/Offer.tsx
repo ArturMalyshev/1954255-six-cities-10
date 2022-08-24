@@ -2,26 +2,72 @@ import {City} from './Map';
 
 export type OfferType = {
   id: number,
-  city: string,
+  city: {
+    location: {
+      latitude: number,
+      longitude: number,
+      zoom: number
+    },
+    name: string
+  }
   location: {
     latitude: number,
     longitude: number,
+    zoom: number
   },
   photo: string[],
   title: string,
   description: string,
+  favorite: boolean,
   premium: boolean,
   type: string,
   rating: number,
-  bedroomCount: string,
-  maxGuests: string,
+  bedroomCount: number,
+  maxGuests: number,
+  previewImage: string,
   price: number,
   options: string[],
   ownerInfo: {
     avatar: string,
     name: string,
+    id: number,
     pro: boolean
   }
+}
+
+export type OfferFromServer = {
+  bedrooms: number
+  city: {
+    location: {
+      latitude: number
+      longitude: number
+      zoom: number
+    }
+    name: string
+  }
+  description: string
+  goods: [string]
+  host: {
+    avatarUrl: string
+    id: number
+    isPro: boolean
+    name: string
+  }
+  id: number
+  images: [string]
+  isFavorite: boolean
+  isPremium: boolean
+  location: {
+    latitude: number
+    longitude: number
+    zoom: number
+  }
+  maxAdults: number
+  previewImage: string
+  price: number
+  rating: number
+  title: string
+  type: string
 }
 
 export type OfferArrayType = {
@@ -53,7 +99,6 @@ export type CityArray = {
 }
 
 export type SortType = {
-  dispatcher: CallableFunction,
   changeSortAction: CallableFunction,
 }
 
@@ -61,5 +106,6 @@ export type StateType = {
   city: string,
   offerArray: OfferType[],
   sortType: string,
-  active : number | undefined
+  active : number | undefined,
+  isDataLoaded: boolean,
 }

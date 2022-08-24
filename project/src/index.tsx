@@ -3,11 +3,9 @@ import ReactDOM from 'react-dom/client';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import {useAppSelector} from './hooks/redux/redux';
-import { store } from './store/index';
+import { store } from './store';
 
-import getMockOfferData from './mocks/offer';
-
-import { OfferArrayType } from './types/Offer';
+import LoadingScreen from './pages/loading_screen/loading_screen';
 
 import PrivareRoute from './components/private_route/private_route';
 import OfferList from './components/offer_list/offer_list';
@@ -18,19 +16,28 @@ import ErrorPage from './pages/error_404/error_404';
 import FavoritesPage from './pages/favorites/favorites';
 import LoginPage from './pages/login/login';
 import PropertyPage from './pages/property/property';
+import {fetchOfferAction} from './store/api-action';
+
+store.dispatch(fetchOfferAction());
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement,
 );
 
-export default function App(data: OfferArrayType) : JSX.Element {
+export default function App() : JSX.Element {
+  const dataLoaded = useAppSelector((state) => state.isDataLoaded);
   const offerArray = useAppSelector((state) => state.offerArray);
+
+  if (!dataLoaded) {
+    return <LoadingScreen />;
+  }
+
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/">
           <Route index element = {
-            <MainPage itemsArray={data}>
+            <MainPage itemsArray={{data: offerArray}}>
               <OfferList data={offerArray} />
             </MainPage>
           }
@@ -45,7 +52,7 @@ export default function App(data: OfferArrayType) : JSX.Element {
             <Route index element = {
               <PrivareRoute>
                 <FavoritesPage>
-                  <OfferList data={data.data} />
+                  <OfferList data={offerArray} />
                 </FavoritesPage>
               </PrivareRoute>
             }
@@ -53,7 +60,7 @@ export default function App(data: OfferArrayType) : JSX.Element {
           </Route>
           <Route path="offer/:id">
             <Route index element = {
-              <PropertyPage data={data.data} child={<CommentForm />}/>
+              <PropertyPage data={offerArray} child={<CommentForm />}/>
             }
             />
           </Route>
@@ -64,4 +71,4 @@ export default function App(data: OfferArrayType) : JSX.Element {
   );
 }
 
-root.render(<Provider store={store}><App data={getMockOfferData()} /></Provider>);
+root.render(<Provider store={store}><App /></Provider>);

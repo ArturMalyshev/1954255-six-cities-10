@@ -24,7 +24,7 @@ export default function Offer(offerInfo: OfferInfoType): JSX.Element {
             <b className="place-card__price-value">&euro;{offerInfo.offerInfo.price}</b>
             <span className="place-card__price-text">&#47;&nbsp;night</span>
           </div>
-          <button className="place-card__bookmark-button button" type="button">
+          <button className={`place-card__bookmark-button button ${ offerInfo.offerInfo.favorite ? 'place-card__bookmark-button--active' : '' }`} type="button">
             <svg className="place-card__bookmark-icon" width="18" height="19">
               <use xlinkHref="#icon-bookmark" />
             </svg>
@@ -33,7 +33,7 @@ export default function Offer(offerInfo: OfferInfoType): JSX.Element {
         </div>
         <div className="place-card__rating rating">
           <div className="place-card__stars rating__stars">
-            <span style={{width: '100%'}} />
+            <span style={{width: `${ 20 * offerInfo.offerInfo.rating }%`}} />
             <span className="visually-hidden">Rating</span>
           </div>
         </div>

@@ -14,11 +14,11 @@ export default function OfferList(offerArray: OfferArrayType) : JSX.Element {
   if (pathname === '/favorites') {
     const cities: string[] = [];
     offerArray.data.sort((a, b)=>{
-      cities.push(a.city);
-      if (a.city > b.city) {
+      cities.push(a.city.name);
+      if (a.city.name > b.city.name) {
         return 1;
       }
-      if (a.city < b.city) {
+      if (a.city.name < b.city.name) {
         return -1;
       }
       return 0;
@@ -39,7 +39,7 @@ export default function OfferList(offerArray: OfferArrayType) : JSX.Element {
               <div className="favorites__places">
                 {
                   offerArray.data.map((offer)=>{
-                    if (city === offer.city) {
+                    if (city === offer.city.name) {
                       return(
                         <FavoriteOffer offerInfo={offer} key={offer.id} />
                       );

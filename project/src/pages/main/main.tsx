@@ -17,7 +17,7 @@ function MainPage({children, itemsArray}: MainPageOffer): JSX.Element {
   const selectedCityName = useAppSelector((state) => state.city);
   const activeOffer = useAppSelector((state) => state.active);
   return (
-    <body>
+    <div>
       <div style={{display: 'none'}}>
         <svg xmlns="http://www.w3.org/2000/svg">
           <symbol id="icon-arrow-select" viewBox="0 0 7 4"><path fillRule="evenodd" clipRule="evenodd" d="M0 0l3.5 2.813L7 0v1.084L3.5 4 0 1.084V0z"></path></symbol>
@@ -68,17 +68,22 @@ function MainPage({children, itemsArray}: MainPageOffer): JSX.Element {
               <section className="cities__places places">
                 <h2 className="visually-hidden">Places</h2>
                 <b className="places__found">{ selectedCityOfferArray.length } places to stay in { selectedCityName }</b>
-                <Sort dispatcher={useAppDispatch()} changeSortAction={onChangeSort} />
+                <Sort changeSortAction={onChangeSort} />
                 {children}
               </section>
               <div className="cities__right-section">
-                <Map points={ selectedCityOfferArray } selectedPoint={ activeOffer === undefined ? undefined : selectedCityOfferArray.find((element)=>{if (element.id === activeOffer) {return element;}})} />
+                <Map
+                  points={ selectedCityOfferArray }
+                  selectedPoint={
+                    activeOffer ? selectedCityOfferArray.find((element)=> element.id === activeOffer ) : undefined
+                  }
+                />
               </div>
             </div>
           </div>
         </main>
       </div>
-    </body>);
+    </div>);
 }
 
 export default MainPage;
