@@ -1,5 +1,12 @@
 import {createReducer} from '@reduxjs/toolkit';
-import {loadOfferArray, onChangeActiveOffer, onChangeCity, onChangeSort, setDataLoadedStatus} from './action';
+import {
+  loadOfferArray,
+  onChangeActiveOffer,
+  onChangeCity,
+  onChangeSort,
+  redirectToRoute,
+  setDataLoadedStatus,
+} from './action';
 import {
   DEFAULT_CITY,
   SORT_BY_POPULAR,
@@ -16,7 +23,8 @@ const initialState : StateType = {
   offerArray: [],
   sortType: SORT_BY_POPULAR,
   active : undefined,
-  isDataLoaded: false
+  isDataLoaded: false,
+  authorizationStatus: false
 };
 
 let defaultSort: OfferType[] = [];
@@ -57,6 +65,10 @@ export const reducer = createReducer(initialState, (builder) => {
 
   builder.addCase(setDataLoadedStatus, (state, action) => {
     state.isDataLoaded = action.payload;
+  });
+
+  builder.addCase(redirectToRoute, (state, action) => {
+    window.location.pathname = action.payload;
   });
 
 });

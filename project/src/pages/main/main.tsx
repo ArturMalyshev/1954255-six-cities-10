@@ -5,6 +5,7 @@ import Map from './../../components/map/map';
 import {onChangeCity, onChangeSort} from '../../store/action';
 import {useAppDispatch, useAppSelector} from '../../hooks/redux/redux';
 import Sort from '../../components/sort/sort';
+import AuthorizationButton from '../../components/authorization_button/authorization_button';
 
 type MainPageOffer = {
   children: JSX.Element|JSX.Element[]
@@ -39,21 +40,7 @@ function MainPage({children, itemsArray}: MainPageOffer): JSX.Element {
                 </a>
               </div>
               <nav className="header__nav">
-                <ul className="header__nav-list">
-                  <li className="header__nav-item user">
-                    <a className="header__nav-link header__nav-link--profile" href="#">
-                      <div className="header__avatar-wrapper user__avatar-wrapper">
-                      </div>
-                      <span className="header__user-name user__name">Oliver.conner@gmail.com</span>
-                      <span className="header__favorite-count">3</span>
-                    </a>
-                  </li>
-                  <li className="header__nav-item">
-                    <a className="header__nav-link" href="#">
-                      <span className="header__signout">Sign out</span>
-                    </a>
-                  </li>
-                </ul>
+                <AuthorizationButton />
               </nav>
             </div>
           </div>

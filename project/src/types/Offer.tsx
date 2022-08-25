@@ -102,10 +102,33 @@ export type SortType = {
   changeSortAction: CallableFunction,
 }
 
+export type userConfiguration = {
+  avatarUrl: string
+  email: string
+  id: number
+  isPro: boolean
+  name: string
+  token: string
+}
+
 export type StateType = {
   city: string,
   offerArray: OfferType[],
   sortType: string,
   active : number | undefined,
   isDataLoaded: boolean,
+  authorizationStatus: userConfiguration | false,
 }
+
+export type AppRouteType = {
+  main: string,
+  login: string,
+  offer: string,
+  logout: string,
+  favorites: string
+}
+
+export type AuthData = {
+  login: string;
+  password: string;
+};

@@ -84,3 +84,11 @@ export enum APIRoute {
   Logout = '/logout',
   Offer = '/hotels/:id',
 }
+
+export enum AppRoute {
+  login = '/login',
+  logout = '/logout',
+  main = '/',
+  favorites = '/favorites',
+  offer = '/offer/:id',
+}

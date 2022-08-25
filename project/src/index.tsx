@@ -16,9 +16,10 @@ import ErrorPage from './pages/error_404/error_404';
 import FavoritesPage from './pages/favorites/favorites';
 import LoginPage from './pages/login/login';
 import PropertyPage from './pages/property/property';
-import {fetchOfferAction} from './store/api-action';
+import {checkloginAction, fetchOfferAction} from './store/api-action';
 
 store.dispatch(fetchOfferAction());
+store.dispatch(checkloginAction());
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement,
