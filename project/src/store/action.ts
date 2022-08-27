@@ -12,6 +12,6 @@ export const loadOfferArray = createAction<OfferFromServer[]>('data/loadOfferArr
 
 export const setDataLoadedStatus = createAction<boolean>('data/setDataLoadedStatus');
 
-export const setAuthorizationStatus = createAction<boolean | userConfiguration>('authorization/status');
+export const setAuthorizationStatus = createAction<false | userConfiguration>('authorization/status');
 
 export const redirectToRoute = createAction<AppRoute>('app/redirectToRoute');

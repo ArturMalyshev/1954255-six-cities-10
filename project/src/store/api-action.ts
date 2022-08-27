@@ -40,9 +40,8 @@ export const checkloginAction = createAsyncThunk<void, undefined, {
 }>(
   'data/checkLogin',
   async (none, {dispatch, extra: api}) => {
-    await api.get(APIRoute.Login).then( (data) => {
-      dispatch(setAuthorizationStatus(data.data));
-    });
+    const { data } = await api.get(APIRoute.Login);
+    dispatch(setAuthorizationStatus(data));
   },
 );
 

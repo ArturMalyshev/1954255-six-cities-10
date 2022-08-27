@@ -5,6 +5,7 @@ import {
   onChangeCity,
   onChangeSort,
   redirectToRoute,
+  setAuthorizationStatus,
   setDataLoadedStatus,
 } from './action';
 import {
@@ -65,6 +66,10 @@ export const reducer = createReducer(initialState, (builder) => {
 
   builder.addCase(setDataLoadedStatus, (state, action) => {
     state.isDataLoaded = action.payload;
+  });
+
+  builder.addCase(setAuthorizationStatus, (state, action) => {
+    state.authorizationStatus = action.payload;
   });
 
   builder.addCase(redirectToRoute, (state, action) => {

@@ -1,16 +1,17 @@
 import {loginAction} from '../../store/api-action';
-import {store} from '../../store';
 import {useRef} from 'react';
 import {AuthData} from '../../types/Offer';
+import {useAppDispatch} from '../../hooks/redux/redux';
 
 
 function LoginPage(): JSX.Element {
 
   const loginRef = useRef<HTMLInputElement | null>(null);
   const passwordRef = useRef<HTMLInputElement | null>(null);
+  const dispatcher = useAppDispatch();
 
   const onSubmit = (authData: AuthData) => {
-    store.dispatch(loginAction(authData));
+    dispatcher(loginAction(authData));
   };
 
   function LoginFormHandler (evt: any) {
