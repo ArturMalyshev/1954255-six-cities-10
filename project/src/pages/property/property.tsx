@@ -11,6 +11,7 @@ import OfferList from '../../components/offer_list/offer_list';
 import React from 'react';
 import AuthorizationButton from '../../components/authorization_button/authorization_button';
 import ErrorPage from '../error_404/error_404';
+import CommentForm from '../../components/comment_form/comment_form';
 
 function PropertyPage(offerInfo: PropertyType): JSX.Element {
 
@@ -112,6 +113,7 @@ function PropertyPage(offerInfo: PropertyType): JSX.Element {
                 </div>
               </div>
               <ReviewList ReviewArray={ reviewArray } />
+              <CommentForm />
             </div>
             <Map points={[offerInfo.data[0], offerInfo.data[1], offerInfo.data[2] ]} />
           </div>
