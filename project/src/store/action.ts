@@ -1,5 +1,5 @@
 import {createAction} from '@reduxjs/toolkit';
-import {CommentType, OfferFromServer, userConfiguration} from '../types/Offer';
+import {CommentType, OfferFromServer, SetCommentType, userConfiguration} from '../types/Offer';
 import {AppRoute} from '../mocks/offer';
 
 export const onChangeCity = createAction<{city: string}>('city/change');
@@ -21,3 +21,7 @@ export const setDataLoadedStatus = createAction<boolean>('data/setDataLoadedStat
 export const setAuthorizationStatus = createAction<false | userConfiguration>('authorization/status');
 
 export const redirectToRoute = createAction<AppRoute>('app/redirectToRoute');
+
+export const setComment = createAction<SetCommentType>('offer/setComment');
+
+export const updateCommentForm = createAction<string>('offer/updateCommentForm');

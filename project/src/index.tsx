@@ -28,6 +28,7 @@ const root = ReactDOM.createRoot(
 export default function App() : JSX.Element {
   const dataLoaded = useAppSelector((state) => state.isDataLoaded);
   const offerArray = useAppSelector((state) => state.offerArray);
+  const commentFormState = useAppSelector((state) => state.commentButton);
 
   if (!dataLoaded) {
     return <LoadingScreen />;
@@ -61,7 +62,7 @@ export default function App() : JSX.Element {
           </Route>
           <Route path="offer/:id">
             <Route index element = {
-              <PropertyPage data={offerArray} child={<CommentForm />}/>
+              <PropertyPage data={offerArray} child={ <CommentForm state={ commentFormState } /> } />
             }
             />
           </Route>

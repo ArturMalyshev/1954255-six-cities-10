@@ -17,11 +17,11 @@ export default function ReviewList (reviewArray: ReviewArray)
       }
     });
 
-    if (reviews.length > 10) {
-      reviews = reviews.slice(0, 11);
-    }
-
     length = reviews.length;
+
+    if (reviews.length > 10) {
+      reviews = reviews.slice(0, 10);
+    }
 
     let keyId = 0;
 

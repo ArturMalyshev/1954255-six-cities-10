@@ -124,9 +124,16 @@ export type StateType = {
   isDataLoaded: boolean,
   authorizationStatus: userConfiguration | false,
   comments?: CommentType[],
+  commentButton: string,
 }
 
 export type AuthData = {
   login: string;
   password: string;
 };
+
+export type SetCommentType = {
+  offerId: number,
+  comment: string,
+  rating: number
+}

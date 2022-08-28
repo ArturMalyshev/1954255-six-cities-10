@@ -6,11 +6,12 @@ import {
   loadOneOffer,
   redirectToRoute,
   setAuthorizationStatus,
-  setDataLoadedStatus
+  setDataLoadedStatus,
+  updateCommentForm
 } from './action';
-import {APIRoute, AppRoute, getOfferMode} from '../mocks/offer';
+import {APIRoute, AppRoute, CommentFormState, getOfferMode} from '../mocks/offer';
 import {AppDispatch, State} from '../types/Store';
-import {AuthData, CommentType, OfferFromServer, userConfiguration} from '../types/Offer';
+import {AuthData, CommentType, OfferFromServer, SetCommentType, userConfiguration} from '../types/Offer';
 import {dropToken, saveToken} from '../services/token';
 
 export const fetchOfferAction = createAsyncThunk<void, { mode: number, offerId?: number }, {
@@ -86,5 +87,26 @@ export const logoutAction = createAsyncThunk<void, undefined, {
       dispatch(setAuthorizationStatus(false));
       dispatch(redirectToRoute(AppRoute.login));
     });
+  },
+);
+
+export const setCommentAction = createAsyncThunk<void, SetCommentType , {
+  dispatch: AppDispatch,
+  state: State,
+  extra: AxiosInstance
+}>(
+  'data/fetchLogout',
+  async ({comment, rating, offerId}, {dispatch, extra: api}) => {
+    dispatch(updateCommentForm(CommentFormState.Loading));
+    api.post<CommentType[]>(APIRoute.Comments + offerId, {comment, rating})
+      .then(
+        (result) => {
+          dispatch(getComments(result.data));
+          dispatch(updateCommentForm(CommentFormState.Ready));
+        },
+        () => {
+          dispatch(updateCommentForm(CommentFormState.Error));
+        }
+      );
   },
 );

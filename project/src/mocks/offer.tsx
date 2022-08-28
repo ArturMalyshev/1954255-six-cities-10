@@ -67,3 +67,9 @@ export enum AppRoute {
   favorites = '/favorites',
   offer = '/offer/:id',
 }
+
+export enum CommentFormState {
+  Loading = 'LOADING',
+  Ready = 'READY',
+  Error = 'ERROR',
+}

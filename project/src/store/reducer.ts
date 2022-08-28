@@ -9,6 +9,7 @@ import {
   redirectToRoute,
   setAuthorizationStatus,
   setDataLoadedStatus,
+  updateCommentForm,
 } from './action';
 import {
   DEFAULT_CITY,
@@ -16,6 +17,7 @@ import {
   SORT_BY_RATE,
   SORT_BY_PRICE_LOW_TO_HIGH,
   SORT_BY_PRICE_HIGH_TO_LOW,
+  CommentFormState,
 } from '../mocks/offer';
 import {OfferType, StateType} from '../types/Offer';
 import adaptDataFromServer from '../services/adaptDataFromServer';
@@ -27,7 +29,8 @@ const initialState : StateType = {
   sortType: SORT_BY_POPULAR,
   active : undefined,
   isDataLoaded: false,
-  authorizationStatus: false
+  authorizationStatus: false,
+  commentButton: CommentFormState.Ready,
 };
 
 let defaultSort: OfferType[] = [];
@@ -96,6 +99,10 @@ export const reducer = createReducer(initialState, (builder) => {
 
   builder.addCase(getComments, (state, action) => {
     state.comments = action.payload;
+  });
+
+  builder.addCase(updateCommentForm, (state, action) => {
+    state.commentButton = action.payload;
   });
 });
 
