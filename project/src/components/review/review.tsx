@@ -1,4 +1,4 @@
-import {CommentType} from './../../types/Offer';
+import {CommentType} from '../../types/Offer';
 
 type reviewData = {
   info: CommentType

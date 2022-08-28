@@ -20,14 +20,12 @@ function PropertyPage(offerInfo: PropertyType): JSX.Element {
   const reviewArray = useAppSelector((state) => state.comments);
 
   if (id) {
-    dispatcher(fetchOfferAction({mode: getOfferMode.NearbyOffers, offerId: +id}));
+    dispatcher(fetchOfferAction({mode: getOfferMode.NearbyOffers, offerId: Number(id)}));
   }
 
   const offer = offerInfo.data[0];
 
-  if (!offer) {
-    return <ErrorPage />;
-  } else if (id && offer.id !== +id) {
+  if (!offer || (id && offer.id !== Number(id))) {
     return <ErrorPage />;
   }
 

@@ -1,22 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4e8ab0c0-ab18-44b5-b776-e4eaba2978b4" name="Changes" comment="4">
+    <list default="true" id="4e8ab0c0-ab18-44b5-b776-e4eaba2978b4" name="Changes" comment="3">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/src/components/comment_form/comment_form.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/components/comment_form/comment_form.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/components/review/review.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/components/review/review.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/src/components/review_list/review_list.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/components/review_list/review_list.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/src/mocks/offer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/mocks/offer.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/src/pages/property/property.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/pages/property/property.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/src/store/action.ts" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/store/action.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/src/store/api-action.ts" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/store/api-action.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/src/store/reducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/store/reducer.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/src/types/Offer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/types/Offer.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="TypeScript File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
@@ -73,7 +75,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1661588682018</updated>
-      <workItem from="1661588684666" duration="52343000" />
+      <workItem from="1661588684666" duration="56727000" />
     </task>
     <task id="LOCAL-00001" summary="Сделал так что бы поле с email работало. и исправил ошибки">
       <created>1661590588384</created>
@@ -103,7 +105,14 @@
       <option name="project" value="LOCAL" />
       <updated>1661678904603</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="3">
+      <created>1661691360962</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1661691360962</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -125,6 +134,7 @@
     <MESSAGE value="1" />
     <MESSAGE value="2" />
     <MESSAGE value="4" />
-    <option name="LAST_COMMIT_MESSAGE" value="4" />
+    <MESSAGE value="3" />
+    <option name="LAST_COMMIT_MESSAGE" value="3" />
   </component>
 </project>

@@ -38,7 +38,7 @@ export default function CommentForm (commentFormState: {state: string}): JSX.Ele
         onSubmit={
           (evt) => {
             evt.preventDefault();
-            SetComment({comment: content.text, rating: content.stars, offerId: +id}, dispatcher);
+            SetComment({comment: content.text, rating: content.stars, offerId: Number(id)}, dispatcher);
             if ( commentFormState.state === CommentFormState.Ready ) {
               setContent({stars: 0, text: ''});
             }
