@@ -10,6 +10,7 @@ import Map from './../../components/map/map';
 import OfferList from '../../components/offer_list/offer_list';
 import React from 'react';
 import AuthorizationButton from '../../components/authorization_button/authorization_button';
+import ErrorPage from '../error_404/error_404';
 
 function PropertyPage(offerInfo: PropertyType): JSX.Element {
 
@@ -23,6 +24,12 @@ function PropertyPage(offerInfo: PropertyType): JSX.Element {
   }
 
   const offer = offerInfo.data[0];
+
+  if (!offer) {
+    return <ErrorPage />;
+  } else if (id && offer.id !== +id) {
+    return <ErrorPage />;
+  }
 
   return (
     <div className="page">
