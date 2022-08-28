@@ -1,20 +1,49 @@
 import {AxiosInstance} from 'axios';
 import {createAsyncThunk} from '@reduxjs/toolkit';
-import {loadOfferArray, redirectToRoute, setAuthorizationStatus, setDataLoadedStatus} from './action';
-import {APIRoute, AppRoute} from '../mocks/offer';
+import {
+  addOffers, getComments,
+  loadOfferArray,
+  loadOneOffer,
+  redirectToRoute,
+  setAuthorizationStatus,
+  setDataLoadedStatus
+} from './action';
+import {APIRoute, AppRoute, getOfferMode} from '../mocks/offer';
 import {AppDispatch, State} from '../types/Store';
-import {AuthData, OfferFromServer, userConfiguration} from '../types/Offer';
+import {AuthData, CommentType, OfferFromServer, userConfiguration} from '../types/Offer';
 import {dropToken, saveToken} from '../services/token';
 
-export const fetchOfferAction = createAsyncThunk<void, undefined, {
+export const fetchOfferAction = createAsyncThunk<void, { mode: number, offerId?: number }, {
   dispatch: AppDispatch,
   state: State,
   extra: AxiosInstance
 }>(
   'data/fetchOffer',
-  async (_arg, {dispatch, extra: api}) => {
-    const {data} = await api.get<OfferFromServer[]>(APIRoute.OfferArray);
-    dispatch(loadOfferArray(data));
+  async ({mode, offerId}, {dispatch, extra: api}) => {
+    if (mode === getOfferMode.OfferArray) {
+
+      const {data} = await api.get<OfferFromServer[]>(APIRoute.OfferArray);
+      dispatch(loadOfferArray(data));
+
+    } else if (mode === getOfferMode.OneOffer) {
+
+      const {data} = await api.get<OfferFromServer>(APIRoute.Offer + offerId);
+      dispatch(loadOneOffer(data));
+
+    } else if (mode === getOfferMode.NearbyOffers) {
+
+      const main = await api.get<OfferFromServer>(APIRoute.Offer + offerId);
+      const nearby = await api.get<OfferFromServer[]>(`${ APIRoute.Offer + offerId }/nearby`);
+      const summaryArray = [main.data];
+      nearby.data.map((elem) => {
+        summaryArray.push(elem);
+      });
+      dispatch(addOffers(summaryArray));
+
+      const {data} = await api.get<CommentType[]>(APIRoute.Comments + offerId);
+      dispatch(getComments(data));
+
+    }
     dispatch(setDataLoadedStatus(true));
   },
 );
@@ -25,7 +54,7 @@ export const loginAction = createAsyncThunk<void, AuthData, {
   extra: AxiosInstance
 }>(
   'data/fetchLogin',
-  async ({login: email, password}, {dispatch, extra: api}) => {
+  async ({login: email, password: password}, {dispatch, extra: api}) => {
     const {data} = await api.post<userConfiguration>(APIRoute.Login, {email, password});
     dispatch(setAuthorizationStatus(data));
     saveToken(data.token);

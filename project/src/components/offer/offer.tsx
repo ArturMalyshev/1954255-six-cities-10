@@ -11,7 +11,10 @@ type OfferInfoType = {
 export default function Offer(offerInfo: OfferInfoType): JSX.Element {
   const { pathname } = useLocation();
   return (
-    <article className={`place-card ${pathname === '/' ? 'cities__card' : 'near-places__card'}`} onMouseEnter={ () => offerInfo.dispatcher(offerInfo.changeActiveOffer({activeOffer: offerInfo.offerInfo.id})) }>
+    <article
+      className={`place-card ${pathname === '/' ? 'cities__card' : 'near-places__card'}`}
+      onMouseEnter={ () => offerInfo.dispatcher(offerInfo.changeActiveOffer({activeOffer: offerInfo.offerInfo.id}))}
+    >
       <PremiumPanel premium={ offerInfo.offerInfo.premium } />
       <div className={`place-card__image-wrapper ${pathname === '/' ? 'cities__image-wrapper' : 'near-places__image-wrapper'}`}>
         <a href={ `/offer/${offerInfo.offerInfo.id}` }>

@@ -1,4 +1,4 @@
-import {loginAction} from '../../store/api-action';
+import { loginAction} from '../../store/api-action';
 import {useRef} from 'react';
 import {AuthData} from '../../types/Offer';
 import {useAppDispatch} from '../../hooks/redux/redux';

@@ -1,13 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4e8ab0c0-ab18-44b5-b776-e4eaba2978b4" name="Changes" comment="">
+    <list default="true" id="4e8ab0c0-ab18-44b5-b776-e4eaba2978b4" name="Changes" comment="Сделал так что бы поле с email работало. и исправил ошибки">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/src/components/authorization_button/authorization_button.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/components/authorization_button/authorization_button.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/components/offer/offer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/components/offer/offer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/components/review/review.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/components/review/review.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/components/review_list/review_list.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/components/review_list/review_list.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/mocks/offer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/mocks/offer.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/src/pages/login/login.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/pages/login/login.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/pages/property/property.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/pages/property/property.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/src/store/action.ts" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/store/action.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/src/store/api-action.ts" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/store/api-action.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/src/store/reducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/store/reducer.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/types/Offer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/types/Offer.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,6 +28,14 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="ProjectId" id="2Dvnyi2DXfUSKJcLGOrMVXl0w9n" />
   <component name="ProjectViewState">
@@ -61,8 +76,16 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1661588682018</updated>
-      <workItem from="1661588684666" duration="1220000" />
+      <workItem from="1661588684666" duration="33479000" />
     </task>
+    <task id="LOCAL-00001" summary="Сделал так что бы поле с email работало. и исправил ошибки">
+      <created>1661590588384</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1661590588384</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -78,5 +101,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Сделал так что бы поле с email работало. и исправил ошибки" />
+    <option name="LAST_COMMIT_MESSAGE" value="Сделал так что бы поле с email работало. и исправил ошибки" />
   </component>
 </project>

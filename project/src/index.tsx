@@ -7,7 +7,6 @@ import { store } from './store';
 
 import LoadingScreen from './pages/loading_screen/loading_screen';
 
-import PrivareRoute from './components/private_route/private_route';
 import OfferList from './components/offer_list/offer_list';
 import CommentForm from './components/comment_form/comment_form';
 
@@ -16,10 +15,11 @@ import ErrorPage from './pages/error_404/error_404';
 import FavoritesPage from './pages/favorites/favorites';
 import LoginPage from './pages/login/login';
 import PropertyPage from './pages/property/property';
-import {checkloginAction, fetchOfferAction} from './store/api-action';
+import {fetchOfferAction} from './store/api-action';
+import {getOfferMode} from './mocks/offer';
+import PrivateRoute from './components/private_route/private_route';
 
-store.dispatch(fetchOfferAction());
-store.dispatch(checkloginAction());
+store.dispatch(fetchOfferAction({mode: getOfferMode.OfferArray}));
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement,
@@ -51,11 +51,11 @@ export default function App() : JSX.Element {
           </Route>
           <Route path="favorites">
             <Route index element = {
-              <PrivareRoute>
+              <PrivateRoute>
                 <FavoritesPage>
                   <OfferList data={offerArray} />
                 </FavoritesPage>
-              </PrivareRoute>
+              </PrivateRoute>
             }
             />
           </Route>

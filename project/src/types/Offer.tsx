@@ -76,19 +76,11 @@ export type OfferArrayType = {
 
 export type PropertyType = {
   data: OfferType[],
-  child: JSX.Element
-}
-
-export type ReviewType = {
-    avatar: string,
-    name: string,
-    stars: number,
-    text: string,
-    date: string
+  child: JSX.Element,
 }
 
 export type ReviewArray = {
-  ReviewArray: ReviewType[]
+  ReviewArray: CommentType[] | undefined
 }
 
 export type CityArray = {
@@ -111,6 +103,19 @@ export type userConfiguration = {
   token: string
 }
 
+export type CommentType = {
+  comment: string
+  date: string
+  id: number
+  rating: number
+  user: {
+    avatarUrl: string
+    id: number
+    isPro: boolean
+    name: string
+  }
+}
+
 export type StateType = {
   city: string,
   offerArray: OfferType[],
@@ -118,14 +123,7 @@ export type StateType = {
   active : number | undefined,
   isDataLoaded: boolean,
   authorizationStatus: userConfiguration | false,
-}
-
-export type AppRouteType = {
-  main: string,
-  login: string,
-  offer: string,
-  logout: string,
-  favorites: string
+  comments?: CommentType[],
 }
 
 export type AuthData = {

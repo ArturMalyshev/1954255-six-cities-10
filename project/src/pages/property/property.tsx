@@ -1,12 +1,27 @@
-import { PropertyType } from '../../types/Offer';
-import { data } from '../../mocks/offer';
+import {PropertyType} from '../../types/Offer';
+import { getOfferMode } from '../../mocks/offer';
+import {useAppDispatch, useAppSelector} from '../../hooks/redux/redux';
+import {fetchOfferAction} from '../../store/api-action';
+import {useParams} from 'react-router-dom';
 
 import PremiumPanel from './../../components/premium_panel/premium_panel';
 import ReviewList from './../../components/review_list/review_list';
 import Map from './../../components/map/map';
 import OfferList from '../../components/offer_list/offer_list';
+import React from 'react';
+import AuthorizationButton from '../../components/authorization_button/authorization_button';
 
 function PropertyPage(offerInfo: PropertyType): JSX.Element {
+
+  const { id } = useParams();
+  const dispatcher = useAppDispatch();
+
+  const reviewArray = useAppSelector((state) => state.comments);
+
+  if (id) {
+    dispatcher(fetchOfferAction({mode: getOfferMode.NearbyOffers, offerId: +id}));
+  }
+
   const offer = offerInfo.data[0];
 
   return (
@@ -20,20 +35,7 @@ function PropertyPage(offerInfo: PropertyType): JSX.Element {
               </a>
             </div>
             <nav className="header__nav">
-              <ul className="header__nav-list">
-                <li className="header__nav-item user">
-                  <a className="header__nav-link header__nav-link--profile" href="#">
-                    <div className="header__avatar-wrapper user__avatar-wrapper"/>
-                    <span className="header__user-name user__name">Oliver.conner@gmail.com</span>
-                    <span className="header__favorite-count">3</span>
-                  </a>
-                </li>
-                <li className="header__nav-item">
-                  <a className="header__nav-link" href="#">
-                    <span className="header__signout">Sign out</span>
-                  </a>
-                </li>
-              </ul>
+              <AuthorizationButton />
             </nav>
           </div>
         </div>
@@ -44,7 +46,7 @@ function PropertyPage(offerInfo: PropertyType): JSX.Element {
             <div className="property__gallery">
               {
                 offer.photo.map( (elem) => (
-                  <div className="property__image-wrapper" key={ offer.id }>
+                  <div className="property__image-wrapper" key={ elem }>
                     <img className="property__image" src={ elem } alt="Photo studio" />
                   </div>
                 ))
@@ -102,7 +104,7 @@ function PropertyPage(offerInfo: PropertyType): JSX.Element {
                   </p>
                 </div>
               </div>
-              <ReviewList ReviewArray={ data } />
+              <ReviewList ReviewArray={ reviewArray } />
             </div>
             <Map points={[offerInfo.data[0], offerInfo.data[1], offerInfo.data[2] ]} />
           </div>

@@ -1,6 +1,8 @@
 import {createReducer} from '@reduxjs/toolkit';
 import {
+  addOffers, getComments,
   loadOfferArray,
+  loadOneOffer,
   onChangeActiveOffer,
   onChangeCity,
   onChangeSort,
@@ -29,6 +31,7 @@ const initialState : StateType = {
 };
 
 let defaultSort: OfferType[] = [];
+const selectedOffer: OfferType[] = [];
 
 export const reducer = createReducer(initialState, (builder) => {
   builder.addCase(onChangeCity, (state, action) => {
@@ -64,6 +67,13 @@ export const reducer = createReducer(initialState, (builder) => {
     state.offerArray = defaultSort.filter((elem) => elem.city.name === state.city);
   });
 
+  builder.addCase(loadOneOffer, (state, action) => {
+    const adaptedValue = adaptDataFromServer([action.payload]);
+    selectedOffer.push(adaptedValue[0]);
+    state.offerArray = selectedOffer;
+  });
+
+
   builder.addCase(setDataLoadedStatus, (state, action) => {
     state.isDataLoaded = action.payload;
   });
@@ -76,5 +86,16 @@ export const reducer = createReducer(initialState, (builder) => {
     window.location.pathname = action.payload;
   });
 
+  builder.addCase(addOffers, (state, action) => {
+    const parsedOffers = adaptDataFromServer(action.payload);
+    parsedOffers.map((offer) => {
+      selectedOffer.push(offer);
+    });
+    state.offerArray = selectedOffer;
+  });
+
+  builder.addCase(getComments, (state, action) => {
+    state.comments = action.payload;
+  });
 });
 

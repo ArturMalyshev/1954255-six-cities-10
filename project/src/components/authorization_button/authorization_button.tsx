@@ -32,6 +32,7 @@ export default function AuthorizationButton() :JSX.Element {
       </ul>
     );
   }
+
   return (
     <ul className="header__nav-list">
       <li className="header__nav-item user">
