@@ -8,10 +8,7 @@ export default function AuthorizationButton() :JSX.Element {
   const dispatcher = useAppDispatch();
 
   if (getToken()) {
-    let email = 'Loading...';
-    if (userConf) {
-      email = userConf.email;
-    } else {
+    if (!userConf) {
       dispatcher(checkloginAction());
     }
     return (
@@ -20,7 +17,7 @@ export default function AuthorizationButton() :JSX.Element {
           <a className="header__nav-link header__nav-link--profile" href={ AppRoute.favorites }>
             <div className="header__avatar-wrapper user__avatar-wrapper">
             </div>
-            <span className="header__user-name user__name">{ email }</span>
+            <span className="header__user-name user__name">{ userConf ? userConf.email : 'Loading...' }</span>
             <span className="header__favorite-count">3</span>
           </a>
         </li>
