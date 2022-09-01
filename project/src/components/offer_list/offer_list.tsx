@@ -6,13 +6,16 @@ import { useLocation } from 'react-router-dom';
 import {useAppDispatch, useAppSelector} from '../../hooks/redux/redux';
 import {onChangeActiveOffer} from '../../store/action';
 import {getFavoriteList} from '../../store/api-action';
+import {getToken} from '../../services/token';
 
 export default function OfferList(offerArray: OfferArrayType) : JSX.Element {
 
   const { pathname } = useLocation();
   const dispatcher = useAppDispatch();
   useEffect(()=>{
-    dispatcher(getFavoriteList());
+    if (getToken()) {
+      dispatcher(getFavoriteList());
+    }
   }, []);
   const favoriteArray = useAppSelector((state) => state.favoriteList);
 
