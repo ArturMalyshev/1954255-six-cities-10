@@ -1,17 +1,22 @@
-import { loginAction} from '../../store/api-action';
+import {loginAction} from '../../store/api-action';
 import {useRef} from 'react';
 import {AuthData} from '../../types/Offer';
 import {useAppDispatch} from '../../hooks/redux/redux';
+import {getToken} from '../../services/token';
+import {redirectToRoute} from '../../store/action';
+import {AppRoute} from '../../mocks/offer';
 
 
 function LoginPage(): JSX.Element {
-
   const loginRef = useRef<HTMLInputElement | null>(null);
   const passwordRef = useRef<HTMLInputElement | null>(null);
   const dispatcher = useAppDispatch();
 
   const onSubmit = (authData: AuthData) => {
-    dispatcher(loginAction(authData));
+    const match = authData.password.match(/(([0-9])+([A-z])+)|(([A-z])+([0-9])+)/);
+    if (match && match[0]) {
+      dispatcher(loginAction(authData));
+    }
   };
 
   function LoginFormHandler (evt: any) {
@@ -19,6 +24,10 @@ function LoginPage(): JSX.Element {
     if (loginRef.current !== null && passwordRef.current !== null) {
       onSubmit({login: loginRef.current.value, password: passwordRef.current.value});
     }
+  }
+
+  if (getToken()) {
+    dispatcher(redirectToRoute(AppRoute.Main));
   }
 
   return (

@@ -52,6 +52,7 @@ export enum APIRoute {
   Logout = '/logout',
   Offer = '/hotels/',
   Comments = '/comments/',
+  Favorite = '/favorite',
 }
 
 export enum getOfferMode {
@@ -61,11 +62,10 @@ export enum getOfferMode {
 }
 
 export enum AppRoute {
-  login = '/login',
-  logout = '/logout',
-  main = '/',
-  favorites = '/favorites',
-  offer = '/offer/:id',
+  Login = '/login',
+  Main = '/',
+  Favorites = '/favorites',
+  Offer = '/offer/:id',
 }
 
 export enum CommentFormState {

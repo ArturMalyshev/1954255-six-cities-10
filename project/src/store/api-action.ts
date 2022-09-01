@@ -7,11 +7,18 @@ import {
   redirectToRoute,
   setAuthorizationStatus,
   setDataLoadedStatus,
-  updateCommentForm
+  updateCommentForm, updateFavoriteList
 } from './action';
 import {APIRoute, AppRoute, CommentFormState, getOfferMode} from '../mocks/offer';
 import {AppDispatch, State} from '../types/Store';
-import {AuthData, CommentType, OfferFromServer, SetCommentType, userConfiguration} from '../types/Offer';
+import {
+  AddToFavorites,
+  AuthData,
+  CommentType,
+  OfferFromServer,
+  SetCommentType,
+  userConfiguration
+} from '../types/Offer';
 import {dropToken, saveToken} from '../services/token';
 
 export const fetchOfferAction = createAsyncThunk<void, { mode: number, offerId?: number }, {
@@ -59,7 +66,7 @@ export const loginAction = createAsyncThunk<void, AuthData, {
     const {data} = await api.post<userConfiguration>(APIRoute.Login, {email, password});
     dispatch(setAuthorizationStatus(data));
     saveToken(data.token);
-    dispatch(redirectToRoute(AppRoute.main));
+    dispatch(redirectToRoute(AppRoute.Main));
   },
 );
 
@@ -85,7 +92,7 @@ export const logoutAction = createAsyncThunk<void, undefined, {
     api.delete(APIRoute.Logout).then(()=>{
       dropToken();
       dispatch(setAuthorizationStatus(false));
-      dispatch(redirectToRoute(AppRoute.login));
+      dispatch(redirectToRoute(AppRoute.Login));
     });
   },
 );
@@ -110,3 +117,34 @@ export const setCommentAction = createAsyncThunk<void, SetCommentType , {
       );
   },
 );
+
+export const getFavoriteList = createAsyncThunk<void, undefined , {
+  dispatch: AppDispatch,
+  state: State,
+  extra: AxiosInstance
+}>(
+  'data/getFavorites',
+  async ( data, {dispatch, extra: api}) => {
+    api.get<OfferFromServer[]>(APIRoute.Favorite).then(
+      (result) => {
+        dispatch(updateFavoriteList(result.data));
+      }
+    );
+  },
+);
+
+export const addToFavorites = createAsyncThunk<void, AddToFavorites , {
+  dispatch: AppDispatch,
+  state: State,
+  extra: AxiosInstance
+}>(
+  'data/addToFavorites',
+  async ({offerId, mode}, {dispatch, extra: api}) => {
+    api.post<CommentType[]>(`${ APIRoute.Favorite }/${offerId}/${mode}`).then(
+      () => {
+        dispatch(getFavoriteList());
+      }
+    );
+  },
+);
+

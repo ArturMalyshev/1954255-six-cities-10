@@ -125,6 +125,7 @@ export type StateType = {
   authorizationStatus: userConfiguration | false,
   comments?: CommentType[],
   commentButton: string,
+  favoriteList: OfferType[]
 }
 
 export type AuthData = {
@@ -136,4 +137,9 @@ export type SetCommentType = {
   offerId: number,
   comment: string,
   rating: number
+}
+
+export type AddToFavorites = {
+  offerId: number,
+  mode: 0 | 1
 }

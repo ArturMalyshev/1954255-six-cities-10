@@ -1,16 +1,18 @@
 import {PropertyType} from '../../types/Offer';
-import { getOfferMode } from '../../mocks/offer';
+import {AppRoute, getOfferMode} from '../../mocks/offer';
 import {useAppDispatch, useAppSelector} from '../../hooks/redux/redux';
-import {fetchOfferAction} from '../../store/api-action';
+import {addToFavorites, fetchOfferAction} from '../../store/api-action';
 import {useParams} from 'react-router-dom';
 
 import PremiumPanel from './../../components/premium_panel/premium_panel';
 import ReviewList from './../../components/review_list/review_list';
 import Map from './../../components/map/map';
 import OfferList from '../../components/offer_list/offer_list';
-import React from 'react';
+import React, {useEffect} from 'react';
 import AuthorizationButton from '../../components/authorization_button/authorization_button';
-import ErrorPage from '../error_404/error_404';
+import ErrorPage from '../error_page/error_page';
+import {getToken} from '../../services/token';
+import {redirectToRoute} from '../../store/action';
 
 function PropertyPage(offerInfo: PropertyType): JSX.Element {
 
@@ -19,11 +21,29 @@ function PropertyPage(offerInfo: PropertyType): JSX.Element {
 
   const reviewArray = useAppSelector((state) => state.comments);
 
-  if (id) {
-    dispatcher(fetchOfferAction({mode: getOfferMode.NearbyOffers, offerId: Number(id)}));
-  }
+  useEffect(()=>{
+    if (id) {
+      dispatcher(fetchOfferAction({mode: getOfferMode.NearbyOffers, offerId: Number(id)}));
+    }
+  });
 
   const offer = offerInfo.data[0];
+  const button = document.querySelector('.property__bookmark-button svg');
+  function addToFavorite(evt: any) {
+    if (getToken() && button) {
+      if (button.classList.contains('property__bookmark-button--active')) {
+        button.classList.remove('property__bookmark-button--active');
+        button.classList.add('property__bookmark-icon');
+        dispatcher(addToFavorites({offerId: offer.id, mode: 0}));
+      } else {
+        button.classList.add('property__bookmark-button--active');
+        button.classList.remove('property__bookmark-icon');
+        dispatcher(addToFavorites({offerId: offer.id, mode: 1}));
+      }
+    } else {
+      dispatcher(redirectToRoute(AppRoute.Login));
+    }
+  }
 
   if (!offer || (id && offer.id !== Number(id))) {
     return <ErrorPage />;
@@ -63,8 +83,8 @@ function PropertyPage(offerInfo: PropertyType): JSX.Element {
               <PremiumPanel premium={offer.premium} />
               <div className="property__name-wrapper">
                 <h1 className="property__name">{ offer.title }</h1>
-                <button className={`property__bookmark-button button ${ offer.favorite ? 'property__bookmark-button--active' : '' } `} type="button">
-                  <svg className="property__bookmark-icon" width="31" height="33">
+                <button className="property__bookmark-button button" type="button" onClick={addToFavorite}>
+                  <svg className={offer.favorite ? 'property__bookmark-button--active' : 'property__bookmark-icon'} width="31" height="33">
                     <use xlinkHref="#icon-bookmark" />
                   </svg>
                   <span className="visually-hidden">To bookmarks</span>

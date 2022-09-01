@@ -1,6 +1,11 @@
-import { OfferType } from '../../types/Offer';
-import { useLocation } from 'react-router-dom';
+import {OfferType} from '../../types/Offer';
+import {useLocation} from 'react-router-dom';
 import PremiumPanel from '../premium_panel/premium_panel';
+import {useAppDispatch} from '../../hooks/redux/redux';
+import {addToFavorites} from '../../store/api-action';
+import {getToken} from '../../services/token';
+import {redirectToRoute} from '../../store/action';
+import {AppRoute} from '../../mocks/offer';
 
 type OfferInfoType = {
   offerInfo: OfferType;
@@ -9,7 +14,24 @@ type OfferInfoType = {
 }
 
 export default function Offer(offerInfo: OfferInfoType): JSX.Element {
+  const dispatcher = useAppDispatch();
   const { pathname } = useLocation();
+
+  function addToFavorite(evt: any) {
+    if (getToken()) {
+      const button = evt.nativeEvent.path[2];
+      if (button.classList.contains('place-card__bookmark-button--active')) {
+        button.classList.remove('place-card__bookmark-button--active');
+        dispatcher(addToFavorites({offerId: offerInfo.offerInfo.id, mode: 0}));
+      } else {
+        button.classList.add('place-card__bookmark-button--active');
+        dispatcher(addToFavorites({offerId: offerInfo.offerInfo.id, mode: 1}));
+      }
+    } else {
+      dispatcher(redirectToRoute(AppRoute.Login));
+    }
+  }
+
   return (
     <article
       className={`place-card ${pathname === '/' ? 'cities__card' : 'near-places__card'}`}
@@ -27,7 +49,11 @@ export default function Offer(offerInfo: OfferInfoType): JSX.Element {
             <b className="place-card__price-value">&euro;{offerInfo.offerInfo.price}</b>
             <span className="place-card__price-text">&#47;&nbsp;night</span>
           </div>
-          <button className={`place-card__bookmark-button button ${ offerInfo.offerInfo.favorite ? 'place-card__bookmark-button--active' : '' }`} type="button">
+          <button
+            className={`place-card__bookmark-button button ${ offerInfo.offerInfo.favorite ? 'place-card__bookmark-button--active' : '' }`}
+            type="button"
+            onClick={ addToFavorite }
+          >
             <svg className="place-card__bookmark-icon" width="18" height="19">
               <use xlinkHref="#icon-bookmark" />
             </svg>

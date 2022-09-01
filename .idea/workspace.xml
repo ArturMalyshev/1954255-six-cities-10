@@ -1,12 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4e8ab0c0-ab18-44b5-b776-e4eaba2978b4" name="Changes" comment="3">
+    <list default="true" id="4e8ab0c0-ab18-44b5-b776-e4eaba2978b4" name="Changes" comment="Обошел useState">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/src/components/comment_form/comment_form.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/components/comment_form/comment_form.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/src/components/review/review.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/components/review/review.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/src/components/review_list/review_list.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/components/review_list/review_list.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/components/authorization_button/authorization_button.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/components/authorization_button/authorization_button.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/components/favorites_offer/favorites_offer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/components/favorites_offer/favorites_offer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/components/offer/offer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/components/offer/offer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/components/offer_list/offer_list.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/components/offer_list/offer_list.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/mocks/offer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/mocks/offer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/pages/error_404/error_404.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/pages/error_page/error_page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/pages/favorites/favorites.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/pages/favorites/favorites.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/pages/favorites_empty/favorites_empty.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/pages/favorites_empty/favorites_empty.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/pages/login/login.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/pages/login/login.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/src/pages/property/property.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/pages/property/property.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/store/action.ts" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/store/action.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/store/api-action.ts" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/store/api-action.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/store/reducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/store/reducer.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/types/Offer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/types/Offer.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -112,7 +123,14 @@
       <option name="project" value="LOCAL" />
       <updated>1661691360962</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Обошел useState">
+      <created>1661796234310</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1661796234310</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -135,6 +153,7 @@
     <MESSAGE value="2" />
     <MESSAGE value="4" />
     <MESSAGE value="3" />
-    <option name="LAST_COMMIT_MESSAGE" value="3" />
+    <MESSAGE value="Обошел useState" />
+    <option name="LAST_COMMIT_MESSAGE" value="Обошел useState" />
   </component>
 </project>

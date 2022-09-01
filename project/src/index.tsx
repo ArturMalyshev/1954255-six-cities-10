@@ -11,7 +11,7 @@ import OfferList from './components/offer_list/offer_list';
 import CommentForm from './components/comment_form/comment_form';
 
 import MainPage from './pages/main/main';
-import ErrorPage from './pages/error_404/error_404';
+import ErrorPage from './pages/error_page/error_page';
 import FavoritesPage from './pages/favorites/favorites';
 import LoginPage from './pages/login/login';
 import PropertyPage from './pages/property/property';

@@ -25,3 +25,5 @@ export const redirectToRoute = createAction<AppRoute>('app/redirectToRoute');
 export const setComment = createAction<SetCommentType>('offer/setComment');
 
 export const updateCommentForm = createAction<string>('offer/updateCommentForm');
+
+export const updateFavoriteList = createAction<OfferFromServer[]>('data/favoriteCount');

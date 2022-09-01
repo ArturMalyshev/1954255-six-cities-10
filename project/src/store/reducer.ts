@@ -10,6 +10,7 @@ import {
   setAuthorizationStatus,
   setDataLoadedStatus,
   updateCommentForm,
+  updateFavoriteList,
 } from './action';
 import {
   DEFAULT_CITY,
@@ -31,6 +32,7 @@ const initialState : StateType = {
   isDataLoaded: false,
   authorizationStatus: false,
   commentButton: CommentFormState.Ready,
+  favoriteList: []
 };
 
 let defaultSort: OfferType[] = [];
@@ -103,6 +105,10 @@ export const reducer = createReducer(initialState, (builder) => {
 
   builder.addCase(updateCommentForm, (state, action) => {
     state.commentButton = action.payload;
+  });
+
+  builder.addCase(updateFavoriteList, (state, action) => {
+    state.favoriteList = adaptDataFromServer(action.payload);
   });
 });
 
