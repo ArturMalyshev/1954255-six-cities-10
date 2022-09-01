@@ -22,14 +22,6 @@ export default function OfferList(offerArray: OfferArrayType) : JSX.Element {
   if (pathname === '/favorites') {
     const cities: string[] = [];
 
-    // favoriteArray.sort((a, b) => {
-    //   cities.push(a.city.name);
-    //   if (a.city.name > b.city.name) {
-    //     return 1;
-    //   }
-    //   return -1;
-    // });
-
     favoriteArray.map((elem)=>{
       cities.push(elem.city.name);
     });
